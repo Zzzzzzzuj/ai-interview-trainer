@@ -1,0 +1,32 @@
+[
+  {
+    "id": "import-js-scope-01",
+    "category": "JavaScript 基础",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "JavaScript 的作用域链是怎样查找变量的？",
+    "answer": "变量会先在当前作用域查找，找不到就沿着词法作用域向外层逐级查找，直到全局作用域；仍找不到才会报错。函数定义的位置决定词法作用域，因此闭包能持续访问外层变量。",
+    "explanation": "先说明由定义位置决定的词法作用域，再说明从内到外的查找顺序。",
+    "keywords": ["当前作用域", "词法作用域", "外层", "全局作用域", "闭包"],
+    "commonMissingPoints": ["把作用域链误说成由调用位置决定", "没有说明找不到变量会继续向外查找"],
+    "codeExample": "const globalName = 'Ada'\nfunction outer() {\n  const team = 'frontend'\n  return function inner() {\n    return `${globalName}-${team}`\n  }\n}",
+    "followUps": ["作用域链和原型链有什么区别？"],
+    "sourceName": "公开前端面试知识点整理",
+    "sourceUrl": "manual"
+  },
+  {
+    "id": "import-vue-props-01",
+    "category": "Vue",
+    "type": "choice",
+    "difficulty": "easy",
+    "question": "Vue 中子组件修改来自 props 的对象字段，为什么通常不推荐？",
+    "options": ["props 永远是深度只读", "会破坏单向数据流，让状态来源难追踪", "Vue 不支持对象 props", "会立即导致编译失败"],
+    "answer": "会破坏单向数据流，让状态来源难追踪",
+    "explanation": "props 的设计意图是父组件向子组件传递数据。子组件需要改变数据时，应 emit 事件让父组件更新来源状态。",
+    "keywords": ["单向数据流", "父组件", "emit"],
+    "commonMissingPoints": ["没有说明状态来源难追踪", "没有给出 emit 的替代方式"],
+    "followUps": ["什么时候可以把 props 复制为本地初始值？"],
+    "sourceName": "公开前端面试知识点整理",
+    "sourceUrl": "manual"
+  }
+]

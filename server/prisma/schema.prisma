@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Question {
+  id                  String   @id
+  category            String
+  type                String
+  difficulty          String
+  question            String
+  answer              String
+  explanation         String
+  options             String?
+  keywords            String
+  commonMissingPoints String
+  codeExample         String?
+  followUps           String?
+  sourceName          String?
+  sourceUrl           String?
+  quality             String?
+  priority            Int?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([question, category])
+  @@index([category, type, difficulty])
+}
+
+model PracticeRecord {
+  id            String   @id @default(cuid())
+  questionId    String
+  category      String
+  type          String
+  isCorrect     Boolean?
+  selectedOption String?
+  userAnswer    String?
+  reviewResult  String?
+  createdAt     DateTime @default(now())
+
+  @@index([questionId, createdAt])
+}
+
+model FavoriteQuestion {
+  id         String   @id @default(cuid())
+  questionId String   @unique
+  createdAt  DateTime @default(now())
+}

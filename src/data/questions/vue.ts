@@ -1,0 +1,50 @@
+import type { InterviewQuestion } from '../../types/interview'
+
+export const vueQuestions: InterviewQuestion[] = [
+  {
+    id: 'vue-reactivity-01', category: 'Vue', type: 'short_answer', difficulty: 'medium',
+    question: 'Vue3 的响应式为什么使用 Proxy？相比 Vue2 有什么实际收益？',
+    answer: 'Vue3 用 Proxy 代理整个对象，能统一拦截读取、修改、新增和删除属性，也更自然地处理数组。相比 Vue2 的 Object.defineProperty，它减少了新增属性和数组变更需要额外处理的限制；同时配合依赖收集，让组件只在相关状态变化时更新。',
+    explanation: '回答“实现方式 + 能力差异 + 更新收益”即可，不必展开 Proxy 的全部陷阱。',
+    keywords: ['Proxy', 'Object.defineProperty', '新增属性', '数组', '依赖收集'],
+    commonMissingPoints: ['只说 Vue3 使用 Proxy，没有说明它解决了什么限制', '没有提到依赖收集和按需更新'],
+    codeExample: 'const state = reactive({ count: 0 })\nstate.count += 1 // 读取 count 的组件会被通知更新',
+    followUps: ['为什么 reactive 不能直接代理基本类型？', 'Vue 响应式是否会深度监听所有属性？'], sourceName: 'Vue Docs Reactivity', sourceUrl: 'https://vuejs.org/guide/extras/reactivity-in-depth.html',
+  },
+  {
+    id: 'vue-computed-01', category: 'Vue', type: 'short_answer', difficulty: 'easy',
+    question: 'computed 和 methods 应该如何选择？',
+    answer: 'computed 适合由响应式数据推导出的值，它会根据依赖缓存，依赖不变时多次读取不会重复计算。methods 每次在模板渲染时调用都会重新执行，更适合带参数的即时计算或事件处理。计算量较大的派生数据优先用 computed。',
+    explanation: '核心不是“能不能调用”，而是派生状态和缓存语义。',
+    keywords: ['派生数据', '依赖', '缓存', '参数', '重新执行'],
+    commonMissingPoints: ['只说 computed 更快，没有说明缓存依赖条件', '没有说明 methods 适合带参数的场景'],
+    codeExample: 'const fullName = computed(() => `${firstName.value} ${lastName.value}`)\nfunction formatPrice(price: number) { return `¥${price}` }',
+    followUps: ['computed 可以有 setter 吗？', 'watch 何时比 computed 更合适？'], sourceName: 'Vue Docs Computed', sourceUrl: 'https://vuejs.org/guide/essentials/computed.html',
+  },
+  {
+    id: 'vue-ref-reactive-01', category: 'Vue', type: 'short_answer', difficulty: 'medium',
+    question: 'ref 和 reactive 怎么选择？',
+    answer: 'ref 适合基本类型，也可以包对象，通过 .value 访问；reactive 更适合一组对象状态。实际组合式函数中我常优先使用 ref，因为赋值、传递和解构时语义更稳定；表单或关联字段较多的状态对象可以用 reactive，但解构时要注意丢失响应式。',
+    explanation: '不要把两者说成完全互斥，重点是状态形态和解构边界。',
+    keywords: ['基本类型', '对象', '.value', '解构', '响应式'],
+    commonMissingPoints: ['没有提到 reactive 解构可能丢失响应式', '把 ref 误认为不能存对象'],
+    codeExample: 'const count = ref(0)\nconst form = reactive({ name: \'\', email: \'\' })',
+    followUps: ['toRefs 的使用场景是什么？'], sourceName: 'Vue Docs Reactivity API', sourceUrl: 'https://vuejs.org/api/reactivity-core.html',
+  },
+  {
+    id: 'vue-watch-01', category: 'Vue', type: 'choice', difficulty: 'medium',
+    question: '关于 watchEffect，哪项说法正确？',
+    options: [{ label: 'A', value: '必须手动列出所有依赖' }, { label: 'B', value: '会立即执行并自动收集同步访问的依赖' }, { label: 'C', value: '不能清理副作用' }, { label: 'D', value: '只能监听一个 ref' }],
+    answer: '会立即执行并自动收集同步访问的依赖', explanation: 'watchEffect 会立即运行并收集执行期间同步访问的响应式依赖；需要精确控制监听源时用 watch。',
+    keywords: ['立即执行', '自动收集依赖', 'watch'], commonMissingPoints: ['没有区分明确监听源的 watch 与自动依赖的 watchEffect'],
+    followUps: ['异步 watchEffect 在 await 后读取的依赖会被追踪吗？'], sourceName: 'Vue Docs Watchers', sourceUrl: 'https://vuejs.org/guide/essentials/watchers.html',
+  },
+  {
+    id: 'vue-key-01', category: 'Vue', type: 'choice', difficulty: 'hard',
+    question: '可增删排序的列表渲染中，为什么不建议把 index 作为 key？',
+    options: [{ label: 'A', value: 'index 不能是数字' }, { label: 'B', value: '会让 CSS 失效' }, { label: 'C', value: '节点身份变化时可能复用错误，导致状态错位' }, { label: 'D', value: 'Vue 不允许使用 index' }],
+    answer: '节点身份变化时可能复用错误，导致状态错位', explanation: 'key 是虚拟 DOM diff 的稳定身份标识。列表变动时 index 会改变，输入框或子组件的内部状态可能匹配到错误的数据项。',
+    keywords: ['diff', '稳定标识', '复用', '状态错位'], commonMissingPoints: ['只说影响性能，没有说明错误复用和状态错位'],
+    followUps: ['静态列表能否使用 index？'], sourceName: 'Vue Docs List Rendering', sourceUrl: 'https://vuejs.org/guide/essentials/list.html',
+  },
+]
