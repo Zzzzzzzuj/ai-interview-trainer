@@ -1,6 +1,7 @@
 export type QuestionType = 'choice' | 'short_answer'
 export type Difficulty = 'easy' | 'medium' | 'hard'
 export type ReviewLevel = '不会' | '一般' | '熟练'
+export type PracticeMode = 'random' | 'sequential' | 'mistakes' | 'favorites' | 'highFrequency'
 
 export const categories = [
   'HTML',
@@ -42,7 +43,7 @@ export interface InterviewQuestion {
   sourceName?: string
   sourceUrl?: string
   quality?: string
-  priority?: number
+  priority?: 'high' | 'medium' | number | null
 }
 
 export interface ReviewResult {

@@ -5,3 +5,11 @@ server/dist/
 server/prisma/dev.db
 server/prisma/dev.db-journal
 *.log
+node_modules/
+dist/
+server/node_modules/
+server/dist/
+server/prisma/dev.db
+server/prisma/dev.db-journal
+*.tsbuildinfo
+*.log

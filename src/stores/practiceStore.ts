@@ -11,6 +11,7 @@ import type {
   ReviewLevel,
 } from '@/types/interview'
 import { categories } from '@/types/interview'
+import { filterQuestions } from '@/utils/questionFilter'
 import { loadFromStorage, saveToStorage } from '@/utils/storage'
 
 const STORAGE_KEYS = {
@@ -237,19 +238,7 @@ export const usePracticeStore = defineStore('practice', () => {
   }
 
   function getFilteredQuestions(filters: PracticeFilters) {
-    const search = filters.search.trim().toLowerCase()
-
-    return questions.value.filter((question) => {
-      const matchesCategory = filters.category === '全部' || question.category === filters.category
-      const matchesType = filters.type === '全部' || question.type === filters.type
-      const matchesDifficulty = filters.difficulty === '全部' || question.difficulty === filters.difficulty
-      const matchesSearch =
-        search.length === 0 ||
-        question.question.toLowerCase().includes(search) ||
-        question.keywords.some((keyword) => keyword.toLowerCase().includes(search))
-
-      return matchesCategory && matchesType && matchesDifficulty && matchesSearch
-    })
+    return filterQuestions(questions.value, { filters })
   }
 
   function getQuestionPracticeRecords(questionId: string) {
@@ -349,6 +338,8 @@ export const usePracticeStore = defineStore('practice', () => {
     isMistake,
     toggleFavorite,
     removeMistake,
+    addMistake,
+    updateMastery,
     submitChoice,
     submitShortAnswer,
     setReviewMode,
