@@ -17,7 +17,7 @@ export interface ImportedQuestion {
   sourceName?: string
   sourceUrl?: string
   quality?: string
-  priority?: number
+  priority?: number | string | null
 }
 
 export interface NormalizedQuestion {
@@ -69,6 +69,16 @@ function makeId(category: string, question: string) {
   return `${slug}-${hash.toString(36)}`
 }
 
+function normalizePriority(value: unknown) {
+  if (typeof value === 'number' && Number.isFinite(value)) return value
+  if (typeof value !== 'string') return null
+  const normalized = value.trim().toLowerCase()
+  if (normalized === 'high') return 100
+  if (normalized === 'medium') return 50
+  const numericValue = Number(normalized)
+  return Number.isFinite(numericValue) ? numericValue : null
+}
+
 export function normalizeQuestion(input: ImportedQuestion): NormalizedQuestion {
   const category = input.category?.trim() || 'JavaScript 基础'
   const question = input.question?.trim() || ''
@@ -92,6 +102,6 @@ export function normalizeQuestion(input: ImportedQuestion): NormalizedQuestion {
     followUps: (() => { const values = stringArray(input.followUps); return values.length ? JSON.stringify(values) : null })(),
     sourceName: input.sourceName?.trim() || '公开前端面试知识点整理',
     sourceUrl: input.sourceUrl?.trim() || 'manual', quality: input.quality?.trim() || 'generated',
-    priority: Number.isFinite(input.priority) ? input.priority as number : null,
+    priority: normalizePriority(input.priority),
   }
 }

@@ -11,6 +11,7 @@
     "db:migrate": "prisma migrate dev --name init",
     "import:questions": "tsx scripts/importQuestions.ts",
     "seed:local": "tsx scripts/seedLocalQuestions.ts",
+    "tag:questions": "tsx scripts/tagQuestions.ts",
     "cleanup:invalid-questions": "tsx scripts/cleanupInvalidQuestions.ts",
     "clean:questions": "tsx scripts/cleanQuestionSemantics.ts",
     "prisma:studio": "prisma studio"
