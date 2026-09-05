@@ -44,8 +44,8 @@ const governanceBaselinePriorityStats: Record<string, number> = {
 }
 
 const codeOutputPattern = /代码输出|输出是什么|输出结果|执行结果|打印结果|console\.log/i
-const handwritingPattern = /手写|实现一个|实现\s|封装一个|写一个|debounce|throttle|deepClone|Promise\.all|instanceof|数组扁平化|发布订阅|并发请求控制/i
-const htmlCssPattern = /html|css|doctype|语义化|src|href|meta|iframe|canvas|svg|label|盒模型|flex|grid|bfc|position|display|选择器|居中|浮动|rem|em|vw|vh|响应式布局|媒体查询|z-index|transition|animation|伪类|伪元素/i
+const handwritingPattern = /手写|实现一个(?!过滤器)|封装一个|写一个|debounce|throttle|deepClone|Promise\.all|Promise\.race|Promise\.any|instanceof|数组扁平化|数组去重|发布订阅|EventEmitter|并发请求控制|请求重试|函数柯里化|compose|千分位|树转列表|列表转树|LRU|sleep|模板引擎|解析 URL/i
+const htmlCssPattern = /html|css|doctype|语义化|src|href|meta|iframe|canvas|svg|label|盒模型|flex|grid|bfc|position|display|选择器|居中|浮动|(?:^|[\s/、，])rem(?:$|[\s/、，])|(?:^|[\s/、，])em(?:$|[\s/、，])|(?:^|[\s/、，])vw(?:$|[\s/、，])|(?:^|[\s/、，])vh(?:$|[\s/、，])|响应式布局|媒体查询|z-index|transition|animation|伪类|伪元素/i
 
 const highRules: Array<[string, RegExp]> = [
   ['JavaScript 基础', /var\s*\/?\s*let\s*\/?\s*const|var|let|const|闭包|\bthis\b|原型链|promise|async\s*\/?\s*await|事件循环|深拷贝|防抖|节流|call\s*\/?\s*apply\s*\/?\s*bind|\bcall\b|\bapply\b|\bbind\b|\bnew\b|作用域/i],
@@ -63,7 +63,7 @@ const lowRules = /冷门|很少使用|过时|不推荐|了解即可|细节|历�
 
 const tagRules: Array<[string, RegExp]> = [
   ['html', /html|doctype|语义化|src|href|meta|iframe|canvas|svg|label|drag/i],
-  ['css', /css|盒模型|bfc|flex|grid|position|display|z-index|居中|浮动|margin|rem|em|vw|vh|媒体查询|transition|animation|伪类|伪元素/i],
+  ['css', /css|盒模型|bfc|flex|grid|position|display|z-index|居中|浮动|margin|(?:^|[\s/、，])rem(?:$|[\s/、，])|(?:^|[\s/、，])em(?:$|[\s/、，])|(?:^|[\s/、，])vw(?:$|[\s/、，])|(?:^|[\s/、，])vh(?:$|[\s/、，])|媒体查询|transition|animation|伪类|伪元素/i],
   ['js-basic', /javascript|js|var|let|const|类型|作用域|原型|闭包|this/i],
   ['closure', /闭包|closure/i],
   ['this', /\bthis\b|this 指向/i],
@@ -138,8 +138,10 @@ function countByCategory(items: TaggableQuestion[]) {
 
 function normalizeCategory(question: TaggableQuestion) {
   const content = textFor(question)
+  if (question.id.startsWith('curated-react-')) return 'React'
+  if (question.id.startsWith('curated-handwriting-')) return '手写代码'
   if (codeOutputPattern.test(content)) return '代码输出'
-  if (handwritingPattern.test(content) && /手写|实现一个|封装一个|写一个|debounce|throttle|deepClone|Promise\.all|数组扁平化|发布订阅|并发请求控制/i.test(content)) return '手写代码'
+  if (handwritingPattern.test(content)) return '手写代码'
   if (question.category === 'HTML' || question.category === 'CSS' || htmlCssPattern.test(content)) return 'HTML / CSS'
   return question.category
 }

@@ -14794,7 +14794,7 @@
   },
   {
     "id": "paste-js-basic-002-2-数据类型检测的方式有哪些",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "数据类型检测的方式有哪些",
@@ -14827,13 +14827,14 @@
     "priority": "medium",
     "codeExample": "console.log(typeof 2);               // number\nconsole.log(typeof true);            // boolean\nconsole.log(typeof 'str');           // string\nconsole.log(typeof []);              // object    \nconsole.log(typeof function(){});    // function\nconsole.log(typeof {});              // object\nconsole.log(typeof undefined);       // undefined\nconsole.log(typeof null);            // object",
     "tags": [
+      "handwriting",
       "js-basic",
       "prototype"
     ]
   },
   {
     "id": "paste-js-basic-003-3-判断数组的方式有哪些",
-    "category": "HTML / CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "判断数组的方式有哪些",
@@ -14862,10 +14863,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "low",
+    "priority": "medium",
     "codeExample": "Object.prototype.toString.call(obj).slice(8,-1) === 'Array';",
     "tags": [
-      "css",
+      "handwriting",
       "html",
       "js-basic",
       "prototype"
@@ -14950,7 +14951,7 @@
   },
   {
     "id": "paste-js-basic-006-6-intanceof-操作符的实现原理及实现",
-    "category": "HTML / CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "intanceof 操作符的实现原理及实现",
@@ -14979,10 +14980,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "low",
+    "priority": "medium",
     "codeExample": "function myInstanceof(left, right) {\n  // 获取对象的原型\n  let proto = Object.getPrototypeOf(left)\n  // 获取构造函数的 prototype 对象\n  let prototype = right.prototype; \n \n  // 判断构造函数的 prototype 对象是否在对象的原型链上\n  while (true) {\n    if (!proto) return false;\n    if (proto === prototype) return true;\n    // 如果没有找到，就继续从其原型上找，Object.getPrototypeOf方法用来获取指定对象的原型\n    proto = Object.getPrototypeOf(proto);\n  }\n}",
     "tags": [
-      "css",
+      "handwriting",
       "html",
       "js-basic",
       "prototype"
@@ -16712,7 +16713,7 @@
   },
   {
     "id": "paste-js-basic-053-22-如何判断一个对象是否属于某个类",
-    "category": "HTML / CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "如何判断一个对象是否属于某个类？",
@@ -16738,9 +16739,9 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "low",
+    "priority": "medium",
     "tags": [
-      "css",
+      "handwriting",
       "html",
       "js-basic",
       "prototype"
@@ -19720,5 +19721,1763 @@
       "js-basic",
       "prototype"
     ]
+  },
+  {
+    "id": "curated-react-001",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 和 Vue 的核心区别是什么？",
+    "answer": "React 更强调用 JavaScript 表达 UI，核心是组件、状态和单向数据流，JSX 让逻辑和视图放在一起组织。Vue 更强调模板和响应式系统，通过模板、指令和依赖追踪降低上手成本。两者都能做组件化开发，区别主要在状态更新模型、模板表达方式、生态习惯和工程约束。",
+    "explanation": "这题适合从 UI 表达方式、响应式模型、数据流、生态和学习成本回答。不要说谁更好，而要说明适用场景：React 灵活但约束少，Vue 集成度更高、模板更直观。",
+    "keywords": [
+      "React",
+      "Vue",
+      "JSX",
+      "模板",
+      "响应式",
+      "单向数据流"
+    ],
+    "commonMissingPoints": [
+      "只说语法不同，没有说数据更新模型",
+      "把框架优劣说成绝对结论",
+      "遗漏生态和工程实践差异"
+    ],
+    "followUps": [
+      "React 的单向数据流体现在哪里？",
+      "Vue 的响应式和 React setState 有什么不同？"
+    ],
+    "codeExample": "function ReactCard({ title }) {\n  return <h3>{title}</h3>\n}\n\n// Vue 中通常是 template + script setup：\n// <template><h3>{{ title }}</h3></template>",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "js-basic",
+      "react",
+      "vue",
+      "vue-reactivity"
+    ]
+  },
+  {
+    "id": "curated-react-002",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 函数组件和类组件有什么区别？",
+    "answer": "类组件通过 class、this.state 和生命周期方法组织逻辑；函数组件本质是函数，通过 Hooks 管理状态、副作用和复用逻辑。现在 React 更推荐函数组件，因为逻辑复用更自然，代码更轻，配合 Hooks 能覆盖大多数类组件能力。",
+    "explanation": "回答时先讲写法差异，再讲状态和生命周期差异，最后说明为什么现代 React 推荐函数组件。常见坑是把函数组件理解成无状态组件，这是旧观念。",
+    "keywords": [
+      "函数组件",
+      "类组件",
+      "Hooks",
+      "生命周期",
+      "this.state"
+    ],
+    "commonMissingPoints": [
+      "认为函数组件不能有状态",
+      "没有提 Hooks",
+      "没有说明逻辑复用方式"
+    ],
+    "followUps": [
+      "类组件的 componentDidMount 对应哪个 Hook 场景？",
+      "为什么 Hooks 不能写在条件语句里？"
+    ],
+    "codeExample": "class Counter extends React.Component {\n  state = { count: 0 }\n  render() {\n    return <button>{this.state.count}</button>\n  }\n}\n\nfunction Counter() {\n  const [count] = useState(0)\n  return <button>{count}</button>\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "hooks",
+      "js-basic",
+      "react",
+      "this"
+    ]
+  },
+  {
+    "id": "curated-react-003",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useState 的更新机制是什么？",
+    "answer": "useState 返回当前状态和更新函数。调用 setState 不会直接修改原变量，而是通知 React 安排一次重新渲染；下一次渲染时组件函数重新执行并拿到新状态。更新依赖旧值时应该使用函数式写法，避免闭包拿到旧状态。",
+    "explanation": "这题重点是说明状态不可变、触发重渲染、批处理和函数式更新。面试里常结合连续 setCount 或异步回调考闭包。",
+    "keywords": [
+      "useState",
+      "setState",
+      "函数式更新",
+      "重新渲染",
+      "闭包"
+    ],
+    "commonMissingPoints": [
+      "认为 setState 会立即改当前变量",
+      "遗漏函数式更新",
+      "直接修改 state 对象"
+    ],
+    "followUps": [
+      "连续调用 setCount(count + 1) 为什么可能只加一次？",
+      "对象状态应该如何更新？"
+    ],
+    "codeExample": "const [count, setCount] = useState(0)\n\nsetCount(count + 1)\nsetCount(count + 1) // 可能仍基于同一个旧 count\n\nsetCount((prev) => prev + 1)\nsetCount((prev) => prev + 1) // 安全累加",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "closure",
+      "hooks",
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-004",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useEffect 主要解决什么问题？",
+    "answer": "useEffect 用来处理渲染之后的副作用，比如请求数据、订阅事件、操作浏览器 API、设置定时器等。它默认在渲染提交到页面后执行，可以通过依赖数组控制执行时机，并通过返回清理函数释放订阅、定时器或取消异步影响。",
+    "explanation": "这题可以围绕副作用定义、执行时机、依赖数组和清理函数回答。不要把 useEffect 当成生命周期的一比一替代，它更像同步外部系统的工具。",
+    "keywords": [
+      "useEffect",
+      "副作用",
+      "依赖数组",
+      "清理函数",
+      "渲染后执行"
+    ],
+    "commonMissingPoints": [
+      "只背生命周期对应关系",
+      "忘记清理函数",
+      "依赖数组漏写导致旧值或重复执行"
+    ],
+    "followUps": [
+      "useEffect 和 useLayoutEffect 有什么区别？",
+      "请求接口时如何避免组件卸载后 setState？"
+    ],
+    "codeExample": "useEffect(() => {\n  const timer = window.setInterval(() => {\n    console.log('tick')\n  }, 1000)\n\n  return () => window.clearInterval(timer)\n}, [])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "hooks",
+      "promise",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-005",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useEffect 依赖数组分别为空、不传、有依赖时有什么区别？",
+    "answer": "不传依赖数组时，effect 会在每次渲染后执行；传空数组时，effect 只在组件挂载后执行一次，清理函数在卸载时执行；传入具体依赖时，首次渲染后会执行，之后依赖变化才重新执行。依赖数组应该真实反映 effect 内用到的响应式值。",
+    "explanation": "这题常考执行次数和依赖正确性。重点提醒不要为了少执行就故意漏依赖，否则容易产生旧闭包和状态不同步。",
+    "keywords": [
+      "useEffect",
+      "依赖数组",
+      "空数组",
+      "重新执行",
+      "闭包"
+    ],
+    "commonMissingPoints": [
+      "混淆空数组和不传数组",
+      "故意漏依赖",
+      "没有解释清理函数重跑时机"
+    ],
+    "followUps": [
+      "为什么 ESLint 会提示 exhaustive-deps？",
+      "依赖是对象或函数时怎么办？"
+    ],
+    "codeExample": "useEffect(() => {\n  console.log('每次渲染后执行')\n})\n\nuseEffect(() => {\n  console.log('只在挂载后执行')\n}, [])\n\nuseEffect(() => {\n  console.log('query 变化时执行')\n}, [query])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "closure",
+      "hooks",
+      "js-basic",
+      "react",
+      "vue-reactivity"
+    ]
+  },
+  {
+    "id": "curated-react-006",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useMemo 的作用是什么？",
+    "answer": "useMemo 用来缓存一次计算结果，只有依赖变化时才重新计算。它适合缓存开销较大的派生数据，或避免每次渲染都创建新值导致子组件重复渲染。它不是默认必用的性能优化工具，只有计算成本或引用稳定性真的有收益时才使用。",
+    "explanation": "回答时讲清“缓存值”而不是“缓存函数”。同时要提醒过度使用 useMemo 会增加心智成本，简单计算没必要包。",
+    "keywords": [
+      "useMemo",
+      "缓存计算结果",
+      "依赖",
+      "性能优化",
+      "引用稳定"
+    ],
+    "commonMissingPoints": [
+      "把 useMemo 和 useCallback 混淆",
+      "所有计算都用 useMemo",
+      "依赖数组写错"
+    ],
+    "followUps": [
+      "useMemo 能保证永远不重新计算吗？",
+      "什么时候 useMemo 反而没有必要？"
+    ],
+    "codeExample": "const visibleList = useMemo(() => {\n  return list.filter((item) => item.name.includes(keyword))\n}, [list, keyword])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "hooks",
+      "http",
+      "performance",
+      "react",
+      "storage"
+    ]
+  },
+  {
+    "id": "curated-react-007",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useCallback 的作用是什么？",
+    "answer": "useCallback 用来缓存函数引用，只有依赖变化时才返回新的函数。它常用于把回调传给 React.memo 包裹的子组件，减少不必要渲染。它不减少函数内部执行成本，主要解决引用稳定性问题。",
+    "explanation": "这题重点区分 useCallback 和 useMemo：前者缓存函数，后者缓存值。要结合 React.memo 才更容易说清使用场景。",
+    "keywords": [
+      "useCallback",
+      "函数引用",
+      "React.memo",
+      "依赖数组",
+      "性能优化"
+    ],
+    "commonMissingPoints": [
+      "误以为 useCallback 会让函数执行更快",
+      "没有结合子组件 memo 场景",
+      "依赖数组漏写"
+    ],
+    "followUps": [
+      "useCallback(fn, deps) 和 useMemo(() => fn, deps) 有什么关系？",
+      "什么时候不需要 useCallback？"
+    ],
+    "codeExample": "const handleSelect = useCallback((id) => {\n  setSelectedId(id)\n}, [])\n\nreturn <MemoItem onSelect={handleSelect} />",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "hooks",
+      "http",
+      "performance",
+      "react",
+      "storage"
+    ]
+  },
+  {
+    "id": "curated-react-008",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React.memo 的作用和失效场景是什么？",
+    "answer": "React.memo 用来缓存函数组件的渲染结果，当 props 浅比较没有变化时跳过本次渲染。它适合纯展示、props 稳定且渲染成本较高的组件。如果传入的对象、数组或函数每次都是新引用，memo 很容易失效，需要配合 useMemo 或 useCallback。",
+    "explanation": "回答时先讲浅比较，再讲适用场景和失效原因。不要认为 memo 可以阻止组件内部 state 或 context 变化导致的渲染。",
+    "keywords": [
+      "React.memo",
+      "浅比较",
+      "props",
+      "useMemo",
+      "useCallback"
+    ],
+    "commonMissingPoints": [
+      "认为 memo 永远阻止渲染",
+      "遗漏对象函数新引用问题",
+      "不知道 state/context 变化仍会渲染"
+    ],
+    "followUps": [
+      "React.memo 和 useMemo 有什么区别？",
+      "memo 的自定义比较函数有什么风险？"
+    ],
+    "codeExample": "const UserCard = React.memo(function UserCard({ user, onClick }) {\n  return <button onClick={onClick}>{user.name}</button>\n})",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "hooks",
+      "http",
+      "react",
+      "storage"
+    ]
+  },
+  {
+    "id": "curated-react-009",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "props 和 state 有什么区别？",
+    "answer": "props 是父组件传入的数据，组件自身不应该修改；state 是组件内部维护的数据，可以通过 setState 或 Hooks 更新。props 更适合表达外部输入，state 更适合表达内部交互状态。两者变化都会触发组件重新渲染。",
+    "explanation": "这题可以用“来源、是否可修改、用途、渲染影响”四个维度回答。常见坑是子组件直接修改 props 或把可派生数据重复放进 state。",
+    "keywords": [
+      "props",
+      "state",
+      "父子组件",
+      "不可变",
+      "重新渲染"
+    ],
+    "commonMissingPoints": [
+      "直接修改 props",
+      "把所有 props 复制到 state",
+      "没有说明二者都会影响渲染"
+    ],
+    "followUps": [
+      "什么时候需要把 props 派生成 state？",
+      "父组件如何修改子组件展示？"
+    ],
+    "codeExample": "function Profile({ name }) {\n  const [editing, setEditing] = useState(false)\n  return <button onClick={() => setEditing(true)}>{name}</button>\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "hooks",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-010",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "受控组件和非受控组件有什么区别？",
+    "answer": "受控组件的表单值由 React state 控制，输入变化通过 onChange 更新 state，数据更可控，适合校验和联动。非受控组件的值保存在 DOM 中，通常通过 ref 读取，代码更简单，适合简单表单或文件上传。",
+    "explanation": "这题重点是数据源在哪里：React state 还是 DOM。不要只背概念，可以补充文件 input 通常更适合非受控。",
+    "keywords": [
+      "受控组件",
+      "非受控组件",
+      "state",
+      "ref",
+      "表单"
+    ],
+    "commonMissingPoints": [
+      "没有说明数据源区别",
+      "忽略 onChange",
+      "不知道文件上传常用非受控"
+    ],
+    "followUps": [
+      "受控组件有什么性能问题？",
+      "如何封装表单组件？"
+    ],
+    "codeExample": "function ControlledInput() {\n  const [value, setValue] = useState('')\n  return <input value={value} onChange={(e) => setValue(e.target.value)} />\n}\n\nfunction UncontrolledInput() {\n  const inputRef = useRef(null)\n  return <input ref={inputRef} />\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "react",
+      "vue",
+      "vue-reactivity"
+    ]
+  },
+  {
+    "id": "curated-react-011",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 中 key 的作用是什么？",
+    "answer": "key 用来帮助 React 在列表 diff 时识别节点身份。稳定的 key 可以让 React 正确复用或移动节点，避免状态错位和不必要的 DOM 操作。key 不推荐用随机数，也不建议在会增删重排的列表里用 index。",
+    "explanation": "这题常和列表渲染、diff、组件状态错位一起考。回答时要强调 key 是同级列表内的身份标识，不是传给组件的普通 props。",
+    "keywords": [
+      "key",
+      "列表渲染",
+      "diff",
+      "节点身份",
+      "状态错位"
+    ],
+    "commonMissingPoints": [
+      "只说提高性能",
+      "使用随机 key",
+      "在动态列表用 index"
+    ],
+    "followUps": [
+      "什么情况下 index 可以作为 key？",
+      "key 改变为什么会导致组件重新挂载？"
+    ],
+    "codeExample": "{todos.map((todo) => (\n  <TodoItem key={todo.id} todo={todo} />\n))}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "performance",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-012",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "虚拟 DOM 的作用是什么？",
+    "answer": "虚拟 DOM 是用 JavaScript 对象描述 UI 结构。状态变化后 React 先生成新的虚拟 DOM，再和旧树比较，计算出需要更新的部分并提交到真实 DOM。它的价值是让 UI 更新更声明式、跨平台能力更好，也能减少直接操作 DOM 的复杂度。",
+    "explanation": "回答时不要简单说“虚拟 DOM 一定更快”。它更重要的是抽象 UI 更新和批量提交，性能来自合理 diff 和减少手动 DOM 操作。",
+    "keywords": [
+      "虚拟 DOM",
+      "React",
+      "diff",
+      "真实 DOM",
+      "声明式"
+    ],
+    "commonMissingPoints": [
+      "绝对化说虚拟 DOM 更快",
+      "没有说明对象描述 UI",
+      "遗漏跨平台抽象价值"
+    ],
+    "followUps": [
+      "虚拟 DOM 和 Fiber 有什么关系？",
+      "Vue 也有虚拟 DOM 吗？"
+    ],
+    "codeExample": "const vnode = {\n  type: 'button',\n  props: { children: '保存' }\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-013",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React diff 算法的基本思路是什么？",
+    "answer": "React diff 基于两个核心假设：不同类型的元素会生成不同子树；同级列表可以用 key 标识稳定节点。比较时主要在同层进行，类型不同直接替换，类型相同复用节点并更新 props，列表通过 key 判断新增、删除和移动。",
+    "explanation": "这题要讲启发式 diff，而不是树编辑距离算法。重点是同层比较、类型判断、key 的作用和复杂度优化。",
+    "keywords": [
+      "diff",
+      "同层比较",
+      "key",
+      "元素类型",
+      "复用"
+    ],
+    "commonMissingPoints": [
+      "没有说同层比较",
+      "只说 key 提高性能",
+      "不知道类型不同会替换子树"
+    ],
+    "followUps": [
+      "为什么 key 不稳定会影响 diff？",
+      "React diff 和 Vue diff 有什么差异？"
+    ],
+    "codeExample": "// key 稳定时，React 能识别只是顺序变化\nconst list = items.map((item) => <li key={item.id}>{item.name}</li>)",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-014",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "setState 在 React 中是同步还是异步？",
+    "answer": "setState 更准确地说是调度更新，不等于立即同步修改当前状态。在 React 事件和批处理场景中，多次更新会被合并后统一渲染；如果依赖旧状态，应使用函数式更新。React 18 后自动批处理覆盖了更多异步场景。",
+    "explanation": "回答时避免简单说同步或异步。面试更想听到批处理、调度和函数式更新，以及为什么立即读取 state 可能还是旧值。",
+    "keywords": [
+      "setState",
+      "批处理",
+      "调度更新",
+      "函数式更新",
+      "React 18"
+    ],
+    "commonMissingPoints": [
+      "简单回答异步",
+      "立即读取更新后的 state",
+      "遗漏函数式更新"
+    ],
+    "followUps": [
+      "React 18 自动批处理改变了什么？",
+      "flushSync 是做什么的？"
+    ],
+    "codeExample": "setCount(count + 1)\nconsole.log(count) // 当前渲染闭包里的旧 count\n\nsetCount((prev) => prev + 1)",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "promise",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-015",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 事件机制有什么特点？",
+    "answer": "React 使用合成事件封装浏览器原生事件，提供跨浏览器一致的事件对象和统一的事件处理模型。事件通常通过委托机制绑定在根节点附近，再按组件树分发。React 17 后事件委托从 document 调整到根容器。",
+    "explanation": "这题可以从合成事件、事件委托、跨浏览器一致性和 React 17 变化回答。不要忽略 stopPropagation、preventDefault 仍然是常用控制方式。",
+    "keywords": [
+      "合成事件",
+      "事件委托",
+      "React 17",
+      "preventDefault",
+      "stopPropagation"
+    ],
+    "commonMissingPoints": [
+      "把合成事件等同于原生事件",
+      "不知道事件委托",
+      "遗漏 React 17 委托位置变化"
+    ],
+    "followUps": [
+      "合成事件如何拿到原生事件？",
+      "React 事件和 DOM 事件执行顺序怎么分析？"
+    ],
+    "codeExample": "<button\n  onClick={(event) => {\n    event.preventDefault()\n    console.log(event.nativeEvent)\n  }}\n>\n  保存\n</button>",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-016",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "Hooks 的使用规则是什么？",
+    "answer": "Hooks 只能在 React 函数组件或自定义 Hook 的顶层调用，不能写在条件、循环、嵌套函数或普通函数里。这样 React 才能依靠调用顺序在多次渲染之间对应每个 Hook 的状态。自定义 Hook 名称通常以 use 开头。",
+    "explanation": "这题核心是“调用顺序稳定”。解释为什么不能条件调用，比单纯背规则更有说服力。",
+    "keywords": [
+      "Hooks 规则",
+      "顶层调用",
+      "调用顺序",
+      "自定义 Hook",
+      "use"
+    ],
+    "commonMissingPoints": [
+      "只背规则不讲原因",
+      "在条件里调用 Hook",
+      "自定义 Hook 不以 use 开头"
+    ],
+    "followUps": [
+      "为什么 Hook 顺序不能变？",
+      "自定义 Hook 能不能共享 state？"
+    ],
+    "codeExample": "function Demo({ enabled }) {\n  const [count, setCount] = useState(0)\n\n  useEffect(() => {\n    if (!enabled) return\n    console.log(count)\n  }, [enabled, count])\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "hooks",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-017",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useRef 常见用途有哪些？",
+    "answer": "useRef 返回一个可变的 ref 对象，修改 current 不会触发重新渲染。它常用于访问 DOM、保存定时器 id、保存上一次值或保存不参与渲染的数据。和 state 不同，ref 更适合存命令式或跨渲染保持但不影响 UI 的值。",
+    "explanation": "回答时要区分 ref 和 state：state 变化驱动 UI，ref 变化不驱动 UI。常见追问是如何获取 DOM 或避免闭包旧值。",
+    "keywords": [
+      "useRef",
+      "DOM",
+      "current",
+      "不触发渲染",
+      "保存值"
+    ],
+    "commonMissingPoints": [
+      "把 ref 当 state 用",
+      "不知道 current 改变不渲染",
+      "遗漏保存定时器等场景"
+    ],
+    "followUps": [
+      "useRef 和 createRef 有什么区别？",
+      "如何用 ref 保存上一次 props？"
+    ],
+    "codeExample": "function SearchBox() {\n  const inputRef = useRef(null)\n  return <button onClick={() => inputRef.current?.focus()}>聚焦</button>\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "react",
+      "vue",
+      "vue-reactivity"
+    ]
+  },
+  {
+    "id": "curated-react-018",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "Context 适合解决什么问题？",
+    "answer": "Context 用来在组件树中跨层传递数据，避免层层透传 props。它适合主题、语言、登录用户等相对全局且变化频率不高的数据。Context 变化会让消费它的组件重新渲染，复杂高频状态通常更适合状态管理库或拆分 Context。",
+    "explanation": "这题要讲适用场景和性能边界。不要把 Context 说成 Redux/Pinia 的完整替代，它只是跨层传值机制。",
+    "keywords": [
+      "Context",
+      "跨层传递",
+      "Provider",
+      "Consumer",
+      "全局状态"
+    ],
+    "commonMissingPoints": [
+      "认为 Context 适合所有状态",
+      "遗漏重新渲染影响",
+      "没有提 Provider"
+    ],
+    "followUps": [
+      "Context 如何做性能优化？",
+      "Context 和状态管理库区别是什么？"
+    ],
+    "codeExample": "const ThemeContext = createContext('light')\n\nfunction App() {\n  return <ThemeContext.Provider value=\"dark\"><Page /></ThemeContext.Provider>\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-019",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 组件通信有哪些方式？",
+    "answer": "React 组件通信常见方式包括父传子 props、子传父回调、兄弟组件状态提升、跨层级使用 Context，以及复杂全局状态使用 Redux、Zustand 等状态管理。选择方式取决于数据作用域、更新频率和组件关系。",
+    "explanation": "回答时按组件关系分类最清楚：父子、兄弟、跨层、全局。别一上来就只说状态管理库。",
+    "keywords": [
+      "组件通信",
+      "props",
+      "回调",
+      "状态提升",
+      "Context"
+    ],
+    "commonMissingPoints": [
+      "没有按关系分类",
+      "过度依赖全局状态",
+      "遗漏子传父回调"
+    ],
+    "followUps": [
+      "状态提升是什么？",
+      "Context 和 props drilling 如何取舍？"
+    ],
+    "codeExample": "function Parent() {\n  const [value, setValue] = useState('')\n  return <Child value={value} onChange={setValue} />\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-020",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React Router 的基本原理是什么？",
+    "answer": "React Router 在前端维护 URL 和组件之间的映射。BrowserRouter 基于 history API 改变地址而不刷新页面，HashRouter 基于 hash 变化实现路由。路由变化后，Router 根据当前路径匹配对应组件并重新渲染视图。",
+    "explanation": "这题可以从 SPA、history/hash、路径匹配和服务端配置回答。常见坑是 BrowserRouter 刷新 404，需要服务端回退到 index.html。",
+    "keywords": [
+      "React Router",
+      "SPA",
+      "history API",
+      "HashRouter",
+      "BrowserRouter"
+    ],
+    "commonMissingPoints": [
+      "不知道刷新 404 原因",
+      "混淆 hash 和 history",
+      "没有说明组件映射"
+    ],
+    "followUps": [
+      "BrowserRouter 为什么需要服务端配置？",
+      "动态路由参数怎么读取？"
+    ],
+    "codeExample": "<Routes>\n  <Route path=\"/\" element={<Home />} />\n  <Route path=\"/users/:id\" element={<UserDetail />} />\n</Routes>",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-021",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 条件渲染常见写法有哪些？",
+    "answer": "React 条件渲染就是根据状态决定渲染哪个 UI。常见写法有 if 提前 return、三元表达式、&& 短路渲染和变量承接 JSX。复杂分支建议拆组件或提前 return，避免 JSX 中嵌套过深。",
+    "explanation": "回答时说明几种写法和适用场景。常见坑是 `0 && <Comp />` 会渲染 0，或者条件分支导致组件频繁卸载重建。",
+    "keywords": [
+      "条件渲染",
+      "if",
+      "三元表达式",
+      "短路渲染",
+      "JSX"
+    ],
+    "commonMissingPoints": [
+      "不知道 0 会被渲染",
+      "复杂条件写进 JSX 导致可读性差",
+      "忽略组件卸载重建"
+    ],
+    "followUps": [
+      "v-if 和 React 条件渲染有什么区别？",
+      "如何处理复杂权限渲染？"
+    ],
+    "codeExample": "if (loading) return <Loading />\n\nreturn isLogin ? <Dashboard /> : <Login />",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-022",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 列表渲染需要注意什么？",
+    "answer": "React 列表渲染通常用 map 把数据转换成 JSX，并给同级列表元素设置稳定 key。key 应该来自业务唯一 id，避免用随机数；动态增删排序的列表也尽量不用 index，防止状态错位和 diff 误判。",
+    "explanation": "这题和 key、diff 强关联。回答时可以补充空列表、分页列表和事件处理的实际写法。",
+    "keywords": [
+      "列表渲染",
+      "map",
+      "key",
+      "业务 id",
+      "diff"
+    ],
+    "commonMissingPoints": [
+      "忘记 key",
+      "使用随机 key",
+      "动态列表用 index"
+    ],
+    "followUps": [
+      "列表项事件如何传参？",
+      "大列表性能如何优化？"
+    ],
+    "codeExample": "{users.map((user) => (\n  <UserRow key={user.id} user={user} />\n))}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-023",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 常见性能优化手段有哪些？",
+    "answer": "React 性能优化常见手段包括合理拆分组件、减少不必要 state、使用 React.memo、useMemo、useCallback 稳定引用，列表使用稳定 key，大列表做虚拟列表，路由或重组件做懒加载。优化前最好先用 Profiler 找到真实瓶颈。",
+    "explanation": "这题不要只堆 API，要按“减少渲染、减少计算、减少资源加载、定位瓶颈”组织。强调先测量再优化。",
+    "keywords": [
+      "性能优化",
+      "React.memo",
+      "useMemo",
+      "useCallback",
+      "虚拟列表",
+      "懒加载"
+    ],
+    "commonMissingPoints": [
+      "盲目使用 memo",
+      "没有提 Profiler",
+      "忽略状态设计"
+    ],
+    "followUps": [
+      "如何判断一个组件为什么重新渲染？",
+      "useMemo 过度使用有什么问题？"
+    ],
+    "codeExample": "const LazyPage = lazy(() => import('./HeavyPage'))\n\n<Suspense fallback={<Loading />}>\n  <LazyPage />\n</Suspense>",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "hooks",
+      "performance",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-024",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 中常见的闭包陷阱是什么？",
+    "answer": "函数组件每次渲染都会创建新的闭包，事件、定时器或异步回调可能拿到创建时那一轮的旧 state。解决方式包括使用函数式更新、把依赖写进 useEffect、使用 ref 保存最新值，或在合适位置重新创建回调。",
+    "explanation": "这题重点是函数组件的渲染快照模型。用定时器或连续 setState 举例最容易讲清楚。",
+    "keywords": [
+      "闭包陷阱",
+      "旧 state",
+      "函数式更新",
+      "useEffect",
+      "useRef"
+    ],
+    "commonMissingPoints": [
+      "不知道为什么拿到旧值",
+      "依赖数组漏写",
+      "没有提函数式更新"
+    ],
+    "followUps": [
+      "setInterval 中 state 为什么不更新？",
+      "useRef 怎么解决旧闭包？"
+    ],
+    "codeExample": "useEffect(() => {\n  const timer = setInterval(() => {\n    setCount((prev) => prev + 1)\n  }, 1000)\n  return () => clearInterval(timer)\n}, [])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "closure",
+      "hooks",
+      "js-basic",
+      "promise",
+      "react",
+      "vue",
+      "vue-reactivity"
+    ]
+  },
+  {
+    "id": "curated-react-025",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "为什么 React 不能直接修改 state？",
+    "answer": "React 依赖状态引用变化来判断是否需要更新 UI。直接修改 state 对象不会产生新的引用，React 可能无法感知变化，也会破坏不可变数据带来的可预测性。正确做法是创建新对象或新数组，再通过 setState 更新。",
+    "explanation": "回答时讲清不可变更新和引用比较。常见坑是数组 push、对象属性直接赋值，然后 set 同一个引用。",
+    "keywords": [
+      "state",
+      "不可变",
+      "引用变化",
+      "setState",
+      "数组对象更新"
+    ],
+    "commonMissingPoints": [
+      "直接 push 后 set 原数组",
+      "不知道引用比较",
+      "把 state 当普通变量改"
+    ],
+    "followUps": [
+      "深层对象如何更新？",
+      "Immer 解决了什么问题？"
+    ],
+    "codeExample": "setUser((prev) => ({\n  ...prev,\n  profile: { ...prev.profile, name: 'Ada' },\n}))\n\nsetList((prev) => [...prev, newItem])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-026",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "useLayoutEffect 和 useEffect 有什么区别？",
+    "answer": "useEffect 在浏览器完成绘制后异步执行，不会阻塞页面展示；useLayoutEffect 在 DOM 更新后、浏览器绘制前同步执行，会阻塞绘制。需要读取布局并同步修改 DOM 时可以用 useLayoutEffect，普通请求、订阅和日志优先用 useEffect。",
+    "explanation": "这题重点是执行时机和是否阻塞绘制。不要滥用 useLayoutEffect，否则会影响首屏和交互流畅度。",
+    "keywords": [
+      "useLayoutEffect",
+      "useEffect",
+      "绘制前",
+      "布局读取",
+      "阻塞绘制"
+    ],
+    "commonMissingPoints": [
+      "只说一个同步一个异步",
+      "普通副作用滥用 useLayoutEffect",
+      "没有说明布局场景"
+    ],
+    "followUps": [
+      "什么场景必须用 useLayoutEffect？",
+      "SSR 中 useLayoutEffect 有什么注意点？"
+    ],
+    "codeExample": "useLayoutEffect(() => {\n  const rect = boxRef.current?.getBoundingClientRect()\n  setWidth(rect?.width ?? 0)\n}, [])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "hooks",
+      "promise",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-027",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 中如何理解组件重新渲染？",
+    "answer": "组件重新渲染是组件函数再次执行并生成新的 React 元素。常见触发原因包括自身 state 更新、父组件重新渲染、props 变化、context 变化。重新渲染不等于真实 DOM 一定更新，React 还会经过 diff 和提交阶段。",
+    "explanation": "这题适合区分 render、diff、commit。面试里常用来判断候选人是否把函数执行和 DOM 更新混为一谈。",
+    "keywords": [
+      "重新渲染",
+      "state",
+      "props",
+      "context",
+      "diff"
+    ],
+    "commonMissingPoints": [
+      "把重新渲染等同于 DOM 更新",
+      "不知道父组件会带动子组件",
+      "遗漏 context"
+    ],
+    "followUps": [
+      "如何减少不必要重新渲染？",
+      "为什么 console.log 会打印多次？"
+    ],
+    "codeExample": "function Child() {\n  console.log('render child')\n  return <div>child</div>\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "browser",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-028",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "easy",
+    "question": "React 中 Fragment 有什么作用？",
+    "answer": "Fragment 用来在不额外生成 DOM 节点的情况下包裹多个子元素。它可以避免为了满足 JSX 单根要求而多包一层 div，从而减少无意义 DOM，保持结构和样式更干净。列表 Fragment 需要使用显式写法并提供 key。",
+    "explanation": "这题是普通但实用的基础题。重点说清不增加 DOM，以及短语法不能加 key。",
+    "keywords": [
+      "Fragment",
+      "不增加 DOM",
+      "JSX",
+      "key"
+    ],
+    "commonMissingPoints": [
+      "以为 Fragment 会渲染成真实节点",
+      "不知道列表 Fragment 要显式 key",
+      "过度嵌套 div"
+    ],
+    "followUps": [
+      "Fragment 短语法和 React.Fragment 区别是什么？",
+      "什么时候不能用短语法？"
+    ],
+    "codeExample": "<React.Fragment key={item.id}>\n  <dt>{item.name}</dt>\n  <dd>{item.desc}</dd>\n</React.Fragment>",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "ai-agent",
+      "browser",
+      "js-basic",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-029",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 中如何发起接口请求？",
+    "answer": "函数组件里常在 useEffect 中根据依赖发起请求，把 loading、data、error 放进 state 管理。请求完成后更新状态，组件卸载或依赖变化时可以用 AbortController 取消请求，避免旧请求回写新页面。复杂项目通常封装请求 Hook 或使用数据请求库。",
+    "explanation": "回答时不要只写 fetch，要讲状态管理、依赖、取消请求和封装。常见坑是依赖变化后旧请求后返回造成数据覆盖。",
+    "keywords": [
+      "useEffect",
+      "fetch",
+      "loading",
+      "error",
+      "AbortController"
+    ],
+    "commonMissingPoints": [
+      "没有 loading/error",
+      "忽略取消请求",
+      "依赖变化导致旧数据覆盖"
+    ],
+    "followUps": [
+      "如何封装 useRequest？",
+      "React Query/SWR 解决了什么问题？"
+    ],
+    "codeExample": "useEffect(() => {\n  const controller = new AbortController()\n  setLoading(true)\n  fetch('/api/users', { signal: controller.signal })\n    .then((res) => res.json())\n    .then(setUsers)\n    .finally(() => setLoading(false))\n  return () => controller.abort()\n}, [])",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "hooks",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-react-030",
+    "category": "React",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "React 中错误边界是什么？",
+    "answer": "错误边界是一种 React 组件，用来捕获子组件渲染阶段、生命周期或构造函数中的错误，并展示降级 UI，避免整个应用白屏。传统错误边界需要类组件实现 getDerivedStateFromError 或 componentDidCatch。它不能捕获事件处理器和异步回调里的错误。",
+    "explanation": "这题属于项目稳定性题。重点说明能捕获什么、不能捕获什么，以及线上可以配合日志上报。",
+    "keywords": [
+      "错误边界",
+      "Error Boundary",
+      "降级 UI",
+      "componentDidCatch",
+      "白屏"
+    ],
+    "commonMissingPoints": [
+      "认为能捕获所有错误",
+      "不知道事件和异步错误捕获不到",
+      "没有提降级 UI"
+    ],
+    "followUps": [
+      "函数组件怎么使用错误边界？",
+      "错误边界应该放在什么粒度？"
+    ],
+    "codeExample": "class ErrorBoundary extends React.Component {\n  state = { hasError: false }\n  static getDerivedStateFromError() {\n    return { hasError: true }\n  }\n  render() {\n    return this.state.hasError ? <Fallback /> : this.props.children\n  }\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "http",
+      "network",
+      "promise",
+      "react"
+    ]
+  },
+  {
+    "id": "curated-handwriting-001",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 Promise.race，并说明边界情况。",
+    "answer": "Promise.race 接收可迭代对象，返回一个新 Promise，谁最先 fulfilled 或 rejected，新 Promise 就跟随谁的状态。实现时需要用 Promise.resolve 包装每一项，兼容普通值和 Promise；空数组会一直 pending。",
+    "explanation": "关键点是“第一个 settle 的结果决定最终状态”，不是第一个成功。边界要提普通值、reject、空数组和迭代异常。",
+    "keywords": [
+      "Promise.race",
+      "Promise.resolve",
+      "settle",
+      "reject",
+      "空数组"
+    ],
+    "commonMissingPoints": [
+      "只处理 fulfilled",
+      "没有兼容普通值",
+      "空数组处理错误"
+    ],
+    "followUps": [
+      "Promise.race 和 Promise.any 有什么区别？",
+      "如何用 race 实现请求超时？"
+    ],
+    "codeExample": "function promiseRace(iterable) {\n  return new Promise((resolve, reject) => {\n    for (const item of iterable) {\n      Promise.resolve(item).then(resolve, reject)\n    }\n  })\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting",
+      "promise"
+    ]
+  },
+  {
+    "id": "curated-handwriting-002",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 apply，并说明和 call 的区别。",
+    "answer": "apply 和 call 都是显式绑定 this 并立即执行函数，区别是 call 接收参数列表，apply 接收参数数组或类数组。实现 apply 可以把函数临时挂到 context 上，用 Symbol 避免属性冲突，执行后删除临时属性。",
+    "explanation": "重点是 this 绑定、参数展开、基本类型 context 包装、null/undefined 指向全局对象等边界。",
+    "keywords": [
+      "apply",
+      "call",
+      "this",
+      "Symbol",
+      "参数数组"
+    ],
+    "commonMissingPoints": [
+      "忘记删除临时属性",
+      "没有处理 null/undefined",
+      "参数没有展开"
+    ],
+    "followUps": [
+      "严格模式下 this 默认值有什么不同？",
+      "bind 和 call/apply 最大区别是什么？"
+    ],
+    "codeExample": "Function.prototype.myApply = function (context, args) {\n  context = context == null ? globalThis : Object(context)\n  const key = Symbol('fn')\n  context[key] = this\n  const result = context[key](...(args ?? []))\n  delete context[key]\n  return result\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "handwriting",
+      "js-basic",
+      "this"
+    ]
+  },
+  {
+    "id": "curated-handwriting-003",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 bind，并支持 new 调用。",
+    "answer": "bind 返回一个新函数，新函数执行时会把原函数 this 固定到指定对象，并预置部分参数。若绑定后的函数被 new 调用，this 应该指向新实例而不是绑定对象，同时实例要能访问原函数原型上的属性。",
+    "explanation": "这题难点是 new 调用优先级和原型关系。普通调用用 apply 绑定 context；构造调用要判断 this instanceof bound。",
+    "keywords": [
+      "bind",
+      "this",
+      "new",
+      "柯里化参数",
+      "原型"
+    ],
+    "commonMissingPoints": [
+      "没有支持 new",
+      "丢失预置参数",
+      "原型链处理错误"
+    ],
+    "followUps": [
+      "bind 后还能改 this 吗？",
+      "箭头函数能被 bind 改 this 吗？"
+    ],
+    "codeExample": "Function.prototype.myBind = function (context, ...preset) {\n  const fn = this\n  function bound(...args) {\n    const isNew = this instanceof bound\n    return fn.apply(isNew ? this : context, [...preset, ...args])\n  }\n  bound.prototype = Object.create(fn.prototype)\n  return bound\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "handwriting",
+      "js-basic",
+      "prototype",
+      "this"
+    ]
+  },
+  {
+    "id": "curated-handwriting-004",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "easy",
+    "question": "手写数组去重。",
+    "answer": "数组去重最常用 Set，因为 Set 天然只保存唯一值。需要注意 Set 对对象按引用去重，两个内容相同但引用不同的对象仍会被认为是不同项。如果要按对象字段去重，需要用 Map 以字段作为 key。",
+    "explanation": "这题基础但常追问 NaN、对象和保持顺序。Set 可以处理 NaN，并保持插入顺序。",
+    "keywords": [
+      "数组去重",
+      "Set",
+      "Map",
+      "引用",
+      "NaN"
+    ],
+    "commonMissingPoints": [
+      "不知道对象是按引用去重",
+      "没有保持原顺序",
+      "忽略 NaN"
+    ],
+    "followUps": [
+      "对象数组如何按 id 去重？",
+      "Set 去重的时间复杂度是多少？"
+    ],
+    "codeExample": "function unique(arr) {\n  return [...new Set(arr)]\n}\n\nfunction uniqueBy(arr, key) {\n  const map = new Map()\n  for (const item of arr) map.set(item[key], item)\n  return [...map.values()]\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ]
+  },
+  {
+    "id": "curated-handwriting-005",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 EventEmitter。",
+    "answer": "EventEmitter 的核心是维护事件名到回调列表的映射。on 用来订阅，off 用来取消订阅，emit 按顺序触发当前事件的所有回调，once 则触发一次后自动解绑。实现时要注意 emit 期间数组被修改的问题。",
+    "explanation": "关键点是事件表结构、订阅/取消/触发/一次性监听。边界包括同一回调多次注册、emit 时 off、回调 this 和参数透传。",
+    "keywords": [
+      "EventEmitter",
+      "on",
+      "off",
+      "emit",
+      "once"
+    ],
+    "commonMissingPoints": [
+      "只实现 emit/on",
+      "once 没解绑",
+      "emit 时数组修改导致漏执行"
+    ],
+    "followUps": [
+      "发布订阅和观察者模式有什么区别？",
+      "如何避免事件监听内存泄漏？"
+    ],
+    "codeExample": "class EventEmitter {\n  constructor() {\n    this.events = new Map()\n  }\n  on(type, handler) {\n    const list = this.events.get(type) ?? []\n    list.push(handler)\n    this.events.set(type, list)\n    return this\n  }\n  off(type, handler) {\n    const list = this.events.get(type) ?? []\n    this.events.set(type, list.filter((fn) => fn !== handler))\n    return this\n  }\n  emit(type, ...args) {\n    const list = this.events.get(type) ?? []\n    for (const fn of [...list]) fn(...args)\n    return this\n  }\n  once(type, handler) {\n    const wrapper = (...args) => {\n      this.off(type, wrapper)\n      handler(...args)\n    }\n    return this.on(type, wrapper)\n  }\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ]
+  },
+  {
+    "id": "curated-handwriting-006",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写并发请求控制。",
+    "answer": "并发请求控制的核心是维护一个任务队列和正在执行数量。每次启动任务前判断 active 是否小于 limit，任务结束后 active 减一并继续调度下一个。最终结果通常要按原任务顺序保存。",
+    "explanation": "重点是限制同时运行数量，而不是分批执行。边界包括失败处理、结果顺序、空任务和所有任务完成时机。",
+    "keywords": [
+      "并发请求控制",
+      "limit",
+      "队列",
+      "Promise",
+      "结果顺序"
+    ],
+    "commonMissingPoints": [
+      "写成批量分组导致吞吐低",
+      "结果顺序错乱",
+      "失败后不继续调度"
+    ],
+    "followUps": [
+      "如何支持失败重试？",
+      "如何取消队列中的任务？"
+    ],
+    "codeExample": "function runWithLimit(tasks, limit) {\n  const results = []\n  let index = 0\n  let active = 0\n\n  return new Promise((resolve, reject) => {\n    function next() {\n      if (index === tasks.length && active === 0) return resolve(results)\n      while (active < limit && index < tasks.length) {\n        const current = index++\n        active++\n        Promise.resolve()\n          .then(tasks[current])\n          .then((res) => { results[current] = res })\n          .then(() => { active--; next() }, reject)\n      }\n    }\n    next()\n  })\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "handwriting",
+      "promise"
+    ]
+  },
+  {
+    "id": "curated-handwriting-007",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写请求重试函数。",
+    "answer": "请求重试函数接收一个返回 Promise 的任务函数、最大重试次数和间隔。任务失败后如果还有次数就等待一段时间再重新执行，全部失败才 reject。实现时要注意重试的是函数调用，不是同一个已经失败的 Promise。",
+    "explanation": "关键点是 task 必须是函数、失败计数、延迟等待和最终错误抛出。可以追问指数退避和只对特定错误重试。",
+    "keywords": [
+      "请求重试",
+      "Promise",
+      "retry",
+      "delay",
+      "错误处理"
+    ],
+    "commonMissingPoints": [
+      "传入 Promise 而不是函数",
+      "次数边界不清",
+      "吞掉最后错误"
+    ],
+    "followUps": [
+      "如何做指数退避？",
+      "哪些 HTTP 状态码适合重试？"
+    ],
+    "codeExample": "const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))\n\nasync function retry(task, times = 3, delay = 300) {\n  let lastError\n  for (let i = 0; i <= times; i++) {\n    try {\n      return await task()\n    } catch (error) {\n      lastError = error\n      if (i < times) await sleep(delay)\n    }\n  }\n  throw lastError\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting",
+      "promise"
+    ]
+  },
+  {
+    "id": "curated-handwriting-008",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写函数柯里化 curry。",
+    "answer": "柯里化是把接收多个参数的函数转换成可以分多次接收参数的函数。实现时记录已收集参数，当参数数量达到原函数形参数量时执行原函数，否则继续返回收集参数的新函数。",
+    "explanation": "重点是参数收集和终止条件。边界包括一次传多个参数、this 透传、可变参数函数如何处理。",
+    "keywords": [
+      "柯里化",
+      "curry",
+      "参数收集",
+      "闭包",
+      "函数式"
+    ],
+    "commonMissingPoints": [
+      "只支持一次传一个参数",
+      "丢失 this",
+      "终止条件写死"
+    ],
+    "followUps": [
+      "柯里化和偏函数有什么区别？",
+      "如何支持占位符？"
+    ],
+    "codeExample": "function curry(fn, ...preset) {\n  return function curried(...args) {\n    const allArgs = [...preset, ...args]\n    if (allArgs.length >= fn.length) {\n      return fn.apply(this, allArgs)\n    }\n    return curry(fn, ...allArgs)\n  }\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "closure",
+      "handwriting",
+      "js-basic"
+    ]
+  },
+  {
+    "id": "curated-handwriting-009",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 compose 函数。",
+    "answer": "compose 用来把多个函数从右到左组合成一个函数，前一个函数的返回值作为下一个函数的入参。实现时可以用 reduceRight。它常用于中间件、函数式数据处理和增强器组合。",
+    "explanation": "关键点是执行方向和初始参数。常见追问是 pipe 从左到右，异步 compose 需要 Promise 链式串联。",
+    "keywords": [
+      "compose",
+      "reduceRight",
+      "函数组合",
+      "pipe",
+      "中间件"
+    ],
+    "commonMissingPoints": [
+      "执行方向写反",
+      "没有处理空函数列表",
+      "不知道 pipe 区别"
+    ],
+    "followUps": [
+      "compose 和 pipe 区别是什么？",
+      "如何实现异步 compose？"
+    ],
+    "codeExample": "function compose(...fns) {\n  return function (value) {\n    return fns.reduceRight((result, fn) => fn(result), value)\n  }\n}\n\nconst add1 = (x) => x + 1\nconst double = (x) => x * 2\ncompose(double, add1)(3) // 8",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ]
+  },
+  {
+    "id": "curated-handwriting-010",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写千分位格式化。",
+    "answer": "千分位格式化可以把整数部分从右往左每三位加一个逗号，小数部分保持不变。实现时要先拆分整数和小数，再处理负号，最后拼回结果。正则也可以用 \\B(?=(\\d{3})+(?!\\d))。",
+    "explanation": "重点是整数、小数、负数和字符串输入。不要直接对整个数字字符串加逗号，否则小数部分会出错。",
+    "keywords": [
+      "千分位格式化",
+      "正则",
+      "小数",
+      "负数",
+      "字符串"
+    ],
+    "commonMissingPoints": [
+      "小数部分也被加逗号",
+      "负号处理错误",
+      "大数字精度丢失"
+    ],
+    "followUps": [
+      "不用正则怎么实现？",
+      "Intl.NumberFormat 有什么优势？"
+    ],
+    "codeExample": "function formatThousands(value) {\n  const str = String(value)\n  const sign = str.startsWith('-') ? '-' : ''\n  const [integer, decimal] = str.replace('-', '').split('.')\n  const formatted = integer.replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',')\n  return sign + formatted + (decimal ? '.' + decimal : '')\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ]
+  },
+  {
+    "id": "curated-handwriting-011",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写树转列表。",
+    "answer": "树转列表就是深度或广度遍历树节点，把每个节点放入结果数组。为了避免结果里继续嵌套 children，通常会解构出 children 后保存剩余字段，也可以额外记录 parentId 或层级信息。",
+    "explanation": "重点是遍历方式和是否保留层级关系。边界包括空树、children 为空、深树递归栈风险。",
+    "keywords": [
+      "树转列表",
+      "递归",
+      "遍历",
+      "children",
+      "parentId"
+    ],
+    "commonMissingPoints": [
+      "直接 push 原节点导致 children 仍嵌套",
+      "遗漏 parentId",
+      "空数组没处理"
+    ],
+    "followUps": [
+      "深树如何避免递归爆栈？",
+      "DFS 和 BFS 结果顺序有什么区别？"
+    ],
+    "codeExample": "function treeToList(tree, parentId = null, result = []) {\n  for (const node of tree) {\n    const { children = [], ...rest } = node\n    result.push({ ...rest, parentId })\n    treeToList(children, node.id, result)\n  }\n  return result\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ]
+  },
+  {
+    "id": "curated-handwriting-012",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写列表转树。",
+    "answer": "列表转树通常先用 Map 建立 id 到节点的映射，并给每个节点补 children。再遍历列表，如果节点有 parentId，就挂到父节点 children 下；没有 parentId 的就是根节点。这样整体时间复杂度是 O(n)。",
+    "explanation": "关键点是先建映射再挂载，避免双重循环。边界包括父节点不存在、多个根节点、原数据是否需要拷贝。",
+    "keywords": [
+      "列表转树",
+      "Map",
+      "parentId",
+      "children",
+      "O(n)"
+    ],
+    "commonMissingPoints": [
+      "使用双重循环",
+      "修改原数组副作用",
+      "父节点不存在时报错"
+    ],
+    "followUps": [
+      "如何保证兄弟节点排序？",
+      "如何处理孤儿节点？"
+    ],
+    "codeExample": "function listToTree(list) {\n  const map = new Map()\n  const roots = []\n\n  for (const item of list) {\n    map.set(item.id, { ...item, children: [] })\n  }\n  for (const item of list) {\n    const node = map.get(item.id)\n    if (item.parentId == null) roots.push(node)\n    else map.get(item.parentId)?.children.push(node)\n  }\n  return roots\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ]
+  },
+  {
+    "id": "curated-handwriting-013",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 Promise.allSettled。",
+    "answer": "Promise.allSettled 会等待所有任务都结束，不管成功还是失败，最终 fulfilled，结果数组按原输入顺序返回。每一项成功时是 { status: \"fulfilled\", value }，失败时是 { status: \"rejected\", reason }。",
+    "explanation": "和 Promise.all 最大区别是 all 遇到一个 reject 就整体 reject，allSettled 会收集所有结果。边界包括普通值、空数组和顺序保持。",
+    "keywords": [
+      "Promise.allSettled",
+      "fulfilled",
+      "rejected",
+      "结果顺序",
+      "Promise.resolve"
+    ],
+    "commonMissingPoints": [
+      "失败时直接 reject",
+      "结果顺序错",
+      "没有兼容普通值"
+    ],
+    "followUps": [
+      "allSettled 适合什么业务场景？",
+      "如何基于 allSettled 做部分成功提示？"
+    ],
+    "codeExample": "function allSettled(promises) {\n  return Promise.all(\n    promises.map((item) =>\n      Promise.resolve(item).then(\n        (value) => ({ status: 'fulfilled', value }),\n        (reason) => ({ status: 'rejected', reason }),\n      ),\n    ),\n  )\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "high",
+    "tags": [
+      "handwriting",
+      "promise"
+    ]
+  },
+  {
+    "id": "curated-handwriting-014",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "easy",
+    "question": "手写 once 函数。",
+    "answer": "once 用来保证一个函数只执行一次。实现时用闭包保存是否执行过和第一次执行结果，后续调用直接返回缓存结果。它常用于初始化、埋点上报、事件绑定保护等场景。",
+    "explanation": "重点是闭包状态、返回值缓存和 this/参数透传。常见坑是只阻止执行但没有返回第一次结果。",
+    "keywords": [
+      "once",
+      "闭包",
+      "缓存结果",
+      "this",
+      "参数"
+    ],
+    "commonMissingPoints": [
+      "没有缓存返回值",
+      "丢失 this",
+      "异步 once 没考虑并发"
+    ],
+    "followUps": [
+      "异步初始化如何保证只请求一次？",
+      "once 和防抖有什么区别？"
+    ],
+    "codeExample": "function once(fn) {\n  let called = false\n  let result\n  return function (...args) {\n    if (!called) {\n      called = true\n      result = fn.apply(this, args)\n    }\n    return result\n  }\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "closure",
+      "code-output",
+      "handwriting",
+      "http",
+      "js-basic",
+      "storage",
+      "this"
+    ]
+  },
+  {
+    "id": "curated-handwriting-015",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "medium",
+    "question": "手写 LRU 缓存。",
+    "answer": "LRU 缓存淘汰最近最少使用的数据。可以用 Map 实现，因为 Map 保持插入顺序；get 命中时先删除再重新 set，让它变成最新；put 超出容量时删除 Map 的第一个 key。",
+    "explanation": "这题重点是“访问也要更新新鲜度”。边界包括容量为 0、更新已有 key、get 未命中返回什么。",
+    "keywords": [
+      "LRU",
+      "Map",
+      "缓存",
+      "淘汰",
+      "最近最少使用"
+    ],
+    "commonMissingPoints": [
+      "get 命中后没有更新顺序",
+      "容量超限删除错 key",
+      "更新已有 key 后顺序不变"
+    ],
+    "followUps": [
+      "为什么 Map 适合实现 LRU？",
+      "高性能 LRU 如何用链表加哈希表？"
+    ],
+    "codeExample": "class LRUCache {\n  constructor(capacity) {\n    this.capacity = capacity\n    this.cache = new Map()\n  }\n  get(key) {\n    if (!this.cache.has(key)) return -1\n    const value = this.cache.get(key)\n    this.cache.delete(key)\n    this.cache.set(key, value)\n    return value\n  }\n  put(key, value) {\n    if (this.cache.has(key)) this.cache.delete(key)\n    this.cache.set(key, value)\n    if (this.cache.size > this.capacity) {\n      const oldestKey = this.cache.keys().next().value\n      this.cache.delete(oldestKey)\n    }\n  }\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "handwriting",
+      "http",
+      "network",
+      "storage"
+    ]
+  },
+  {
+    "id": "curated-handwriting-016",
+    "category": "手写代码",
+    "type": "short_answer",
+    "difficulty": "easy",
+    "question": "手写 sleep 延迟函数。",
+    "answer": "sleep 返回一个 Promise，在指定时间后 resolve，常用于 async/await 流程里的延迟、重试间隔和动画节奏控制。它本身不会阻塞线程，只是把后续逻辑放到定时器完成后的异步流程里。",
+    "explanation": "这题简单但能考异步基础。要说明它不是同步阻塞，await sleep 只是暂停当前 async 函数后续执行。",
+    "keywords": [
+      "sleep",
+      "Promise",
+      "setTimeout",
+      "async await",
+      "异步"
+    ],
+    "commonMissingPoints": [
+      "认为 sleep 会阻塞主线程",
+      "没有返回 Promise",
+      "忘记 resolve"
+    ],
+    "followUps": [
+      "如何实现可取消 sleep？",
+      "sleep 在重试函数里怎么用？"
+    ],
+    "codeExample": "function sleep(ms) {\n  return new Promise((resolve) => {\n    setTimeout(resolve, ms)\n  })\n}\n\nasync function demo() {\n  await sleep(1000)\n  console.log('1s later')\n}",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting",
+      "promise"
+    ]
+  },
+  {
+    "category": "手写代码",
+    "type": "short_answer",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting",
+      "promise"
+    ],
+    "id": "curated-handwriting-017",
+    "difficulty": "medium",
+    "question": "手写 Promise.any，并说明和 Promise.race 的区别。",
+    "answer": "Promise.any 接收一组任务，只要有一个 Promise fulfilled，整体就 fulfilled 并返回这个成功值；只有全部 rejected 时才 rejected，并抛出 AggregateError。它和 Promise.race 的区别是 race 谁先 settle 就跟谁，而 any 只关心第一个成功。",
+    "explanation": "关键点是记录失败次数和错误列表，成功时立即 resolve，全部失败时 reject。边界包括空数组、普通值、结果顺序不重要和 AggregateError。",
+    "keywords": [
+      "Promise.any",
+      "AggregateError",
+      "fulfilled",
+      "rejected",
+      "Promise.resolve"
+    ],
+    "commonMissingPoints": [
+      "把 any 写成 race",
+      "没有处理全部失败",
+      "没有兼容普通值"
+    ],
+    "followUps": [
+      "Promise.any 适合什么业务场景？",
+      "Promise.any 和 Promise.all 有什么区别？"
+    ],
+    "codeExample": "function promiseAny(iterable) {\n  return new Promise((resolve, reject) => {\n    const list = Array.from(iterable)\n    if (list.length === 0) return reject(new AggregateError([], 'All promises were rejected'))\n    const errors = []\n    let rejectedCount = 0\n\n    list.forEach((item, index) => {\n      Promise.resolve(item).then(resolve, (error) => {\n        errors[index] = error\n        rejectedCount++\n        if (rejectedCount === list.length) {\n          reject(new AggregateError(errors, 'All promises were rejected'))\n        }\n      })\n    })\n  })\n}"
+  },
+  {
+    "category": "手写代码",
+    "type": "short_answer",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ],
+    "id": "curated-handwriting-018",
+    "difficulty": "medium",
+    "question": "手写解析 URL query 参数函数。",
+    "answer": "解析 query 的核心是取出问号后的字符串，按 & 拆分键值对，再用 decodeURIComponent 解码。遇到重复 key 可以收集成数组，遇到没有值的 key 可以给空字符串或 true，具体取决于业务约定。",
+    "explanation": "重点是处理 ?、#、URL 编码、重复 key、空值和无 query 的情况。面试里不要只写 happy path。",
+    "keywords": [
+      "URL",
+      "query",
+      "decodeURIComponent",
+      "重复 key",
+      "参数解析"
+    ],
+    "commonMissingPoints": [
+      "没有处理 URL 编码",
+      "重复 key 被覆盖",
+      "hash 片段污染参数"
+    ],
+    "followUps": [
+      "URLSearchParams 有什么优势？",
+      "重复参数应该如何设计返回结构？"
+    ],
+    "codeExample": "function parseQuery(url) {\n  const query = (url.split('?')[1] || '').split('#')[0]\n  const result = {}\n  if (!query) return result\n\n  for (const pair of query.split('&')) {\n    if (!pair) continue\n    const [rawKey, rawValue = ''] = pair.split('=')\n    const key = decodeURIComponent(rawKey)\n    const value = decodeURIComponent(rawValue)\n    if (Object.prototype.hasOwnProperty.call(result, key)) {\n      result[key] = Array.isArray(result[key]) ? [...result[key], value] : [result[key], value]\n    } else {\n      result[key] = value\n    }\n  }\n  return result\n}"
+  },
+  {
+    "category": "手写代码",
+    "type": "short_answer",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "handwriting"
+    ],
+    "id": "curated-handwriting-019",
+    "difficulty": "medium",
+    "question": "手写简单模板引擎，将 {{name}} 替换成数据。",
+    "answer": "简单模板引擎可以用正则匹配双花括号中的 key，再从数据对象中取值替换。实现时要 trim key，缺失值可以替换为空字符串。真实项目还要注意 XSS 转义和复杂路径访问。",
+    "explanation": "关键点是正则全局匹配、key 清洗、缺失值处理和安全边界。这个题不要扩展成完整 Vue 模板编译，讲清字符串替换即可。",
+    "keywords": [
+      "模板引擎",
+      "正则",
+      "replace",
+      "XSS",
+      "字符串替换"
+    ],
+    "commonMissingPoints": [
+      "没有全局替换",
+      "缺失字段显示 undefined",
+      "忽略 XSS 风险"
+    ],
+    "followUps": [
+      "如何支持 user.name 这种路径？",
+      "为什么真实模板引擎不能直接拼 HTML？"
+    ],
+    "codeExample": "function render(template, data) {\n  return template.replace(/{{\\s*([\\w.]+)\\s*}}/g, (_, key) => {\n    const value = key.split('.').reduce((obj, name) => obj?.[name], data)\n    return value == null ? '' : String(value)\n  })\n}\n\nrender('Hello {{ user.name }}', { user: { name: 'Ada' } }) // Hello Ada"
+  },
+  {
+    "category": "手写代码",
+    "type": "short_answer",
+    "sourceName": "自建前端面试题库",
+    "sourceUrl": "manual",
+    "quality": "curated",
+    "priority": "medium",
+    "tags": [
+      "browser",
+      "closure",
+      "handwriting",
+      "http",
+      "js-basic",
+      "storage"
+    ],
+    "id": "curated-handwriting-020",
+    "difficulty": "medium",
+    "question": "手写 memoize 缓存函数。",
+    "answer": "memoize 用闭包保存一个缓存表，把函数参数序列化成 key。调用时如果缓存命中就直接返回结果，否则执行原函数并缓存结果。它适合纯函数和重复计算场景，不适合依赖外部状态或参数不可稳定序列化的函数。",
+    "explanation": "重点是缓存 key 的生成、this/参数透传和适用边界。面试追问常包括对象参数、缓存失效和内存增长。",
+    "keywords": [
+      "memoize",
+      "缓存",
+      "闭包",
+      "纯函数",
+      "Map"
+    ],
+    "commonMissingPoints": [
+      "没有透传 this",
+      "对象参数 key 不稳定",
+      "没有考虑缓存膨胀"
+    ],
+    "followUps": [
+      "如何给 memoize 加过期时间？",
+      "对象参数如何生成稳定 key？"
+    ],
+    "codeExample": "function memoize(fn, resolver = (...args) => JSON.stringify(args)) {\n  const cache = new Map()\n  return function (...args) {\n    const key = resolver(...args)\n    if (cache.has(key)) return cache.get(key)\n    const result = fn.apply(this, args)\n    cache.set(key, result)\n    return result\n  }\n}"
   }
 ]

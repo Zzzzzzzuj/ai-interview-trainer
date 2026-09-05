@@ -1,6 +1,6 @@
 # 题库分类治理与高频规则收紧报告
 
-生成时间：2026-09-05T08:54:31.262Z
+生成时间：2026-09-05T09:07:35.814Z
 
 ## 任务初始分类统计
 - JavaScript 基础: 104
@@ -16,23 +16,23 @@
 - 代码输出: 40
 
 ## 本轮运行前分类统计
-- JavaScript 基础: 86
-- HTML / CSS: 121
-- 手写代码: 15
+- JavaScript 基础: 85
+- HTML / CSS: 122
+- 手写代码: 38
 - Vue: 96
-- React: 2
+- React: 28
 - HTTP / 网络: 64
 - 前端工程化: 25
-- 代码输出: 45
+- 代码输出: 46
 - 浏览器原理: 53
 - 性能优化: 23
 
 ## 治理后分类统计
-- JavaScript 基础: 86
-- HTML / CSS: 121
-- 手写代码: 15
+- JavaScript 基础: 85
+- HTML / CSS: 118
+- 手写代码: 39
 - Vue: 96
-- React: 2
+- React: 32
 - HTTP / 网络: 64
 - 前端工程化: 25
 - 代码输出: 45
@@ -40,48 +40,48 @@
 - 性能优化: 23
 
 ## 高频规则结果
-- high: 226
-- medium: 179
-- low: 125
+- high: 249
+- medium: 209
+- low: 122
 
 ## 每个分类 High 数量
 - 代码输出: 43
 - 浏览器原理: 4
 - 前端工程化: 18
-- 手写代码: 3
+- 手写代码: 7
 - 性能优化: 10
 - HTML / CSS: 0
 - HTTP / 网络: 13
 - JavaScript 基础: 42
-- React: 1
+- React: 20
 - Vue: 92
 
 ## 变更统计
 - 累计被重新分类的题目数量: 139
-- 本轮被重新分类的题目数量: 0
-- 本轮 priority 被调整的题目数量: 0
+- 本轮被重新分类的题目数量: 5
+- 本轮 priority 被调整的题目数量: 5
 
 ## Tags Top 20
-- browser: 279
-- http: 240
-- storage: 230
-- performance: 189
-- js-basic: 164
-- vue-reactivity: 156
-- css: 125
+- browser: 305
+- http: 247
+- storage: 236
+- performance: 193
+- js-basic: 180
+- vue-reactivity: 161
+- css: 122
 - html: 121
-- vue: 116
-- network: 90
-- promise: 71
+- vue: 120
+- network: 92
+- promise: 82
 - event-loop: 48
-- code-output: 45
-- prototype: 33
+- react: 47
+- code-output: 46
+- handwriting: 39
+- prototype: 34
+- this: 33
 - engineering: 32
-- this: 29
-- react: 17
-- handwriting: 15
-- closure: 13
-- ai-agent: 7
+- closure: 19
+- hooks: 15
 
 ## React 和手写代码当前缺口建议
 - React 当前题量仍偏少，建议补充 Hooks 规则、状态更新批处理、组件渲染优化、受控/非受控组件、React Router 和工程实践追问。
