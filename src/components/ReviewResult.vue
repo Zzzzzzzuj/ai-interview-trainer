@@ -13,7 +13,10 @@ defineProps<{
         <p class="muted-label">评分结果</p>
         <h3>{{ result.score }} 分 / {{ result.level }}</h3>
       </div>
-      <span class="badge badge-score">{{ result.level }}</span>
+      <div class="tag-list">
+        <span class="badge badge-score">{{ result.level }}</span>
+        <span class="tag subtle">{{ result.source === 'ai' ? 'AI 批改' : '本地规则评分' }}</span>
+      </div>
     </div>
 
     <p class="review-feedback">{{ result.feedback }}</p>

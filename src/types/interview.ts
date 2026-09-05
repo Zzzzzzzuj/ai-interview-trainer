@@ -53,6 +53,7 @@ export interface ReviewResult {
   missedPoints: string[]
   feedback: string
   betterAnswer: string
+  source?: 'ai' | 'local_fallback'
 }
 
 export interface PracticeRecord {

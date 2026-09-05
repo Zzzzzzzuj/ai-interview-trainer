@@ -40,5 +40,6 @@ export function localRuleReview(question: InterviewQuestion, userAnswer: string)
     missedPoints: missedPoints.length > 0 ? missedPoints : question.commonMissingPoints.slice(0, 3),
     feedback,
     betterAnswer: question.answer,
+    source: 'local_fallback',
   }
 }
