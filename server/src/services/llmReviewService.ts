@@ -51,6 +51,12 @@ function stringArray(value: unknown) {
   return Array.isArray(value) ? value.map(String).map((item) => item.trim()).filter(Boolean) : []
 }
 
+function limitedTimeoutMs(value: string | undefined) {
+  const timeoutMs = Number(value)
+  if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) return 30000
+  return Math.min(timeoutMs, 60000)
+}
+
 export function localFallbackReview(input: ReviewAnswerRequest): ReviewAnswerResult {
   const normalizedAnswer = normalize(input.userAnswer)
   const matchedKeywords = input.keywords.filter((keyword) => normalizedAnswer.includes(normalize(keyword)))
@@ -107,9 +113,9 @@ function normalizeAiResult(parsed: Partial<ReviewAnswerResult>, input: ReviewAns
   return {
     score,
     level,
-    matchedKeywords: stringArray(parsed.matchedKeywords),
-    missingKeywords: stringArray(parsed.missingKeywords),
-    missedPoints: stringArray(parsed.missedPoints),
+    matchedKeywords: stringArray(parsed.matchedKeywords).slice(0, 20),
+    missingKeywords: stringArray(parsed.missingKeywords).slice(0, 20),
+    missedPoints: stringArray(parsed.missedPoints).slice(0, 10),
     feedback: typeof parsed.feedback === 'string' && parsed.feedback.trim()
       ? parsed.feedback.trim()
       : '已完成 AI 批改，建议对照关键词补齐表达。',
@@ -124,7 +130,7 @@ export async function reviewAnswerWithLlm(input: ReviewAnswerRequest): Promise<R
   const apiKey = process.env.LLM_API_KEY?.trim()
   const baseUrl = process.env.LLM_BASE_URL?.trim() || 'https://api.deepseek.com'
   const model = process.env.LLM_MODEL?.trim() || 'deepseek-chat'
-  const timeoutMs = Number(process.env.LLM_TIMEOUT_MS) || 30000
+  const timeoutMs = limitedTimeoutMs(process.env.LLM_TIMEOUT_MS)
 
   if (!apiKey) {
     return localFallbackReview(input)
