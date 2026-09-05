@@ -2,7 +2,7 @@ import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { allQuestions as questionBank } from '@/data/questions'
 import { reviewAnswer } from '@/services/answerReviewService'
-import { fetchQuestions } from '@/services/questionApi'
+import { fetchAllQuestions, fetchQuestionCategories } from '@/services/questionApi'
 import type {
   InterviewQuestion,
   MasteryRecord,
@@ -48,8 +48,20 @@ function isMasteryRecord(value: unknown): value is MasteryRecord {
   return value !== null && typeof value === 'object'
 }
 
+function getLocalCategoryStats() {
+  return questionBank.reduce<Record<string, number>>((counts, question) => {
+    counts[question.category] = (counts[question.category] ?? 0) + 1
+    return counts
+  }, {})
+}
+
 export const usePracticeStore = defineStore('practice', () => {
-  const allQuestions = ref<InterviewQuestion[]>(questionBank)
+  const questions = ref<InterviewQuestion[]>(questionBank)
+  const totalQuestions = ref(questionBank.length)
+  const categoryStats = ref<Record<string, number>>(getLocalCategoryStats())
+  const questionSource = ref<'local' | 'api'>('local')
+  const isLoadingQuestions = ref(false)
+  const questionLoadError = ref<string | null>(null)
   const records = ref<PracticeRecord[]>(loadArray<unknown>(STORAGE_KEYS.records).filter(isRecord))
   const favorites = ref<string[]>(loadArray<unknown>(STORAGE_KEYS.favorites).filter((id): id is string => typeof id === 'string'))
   const mistakes = ref<string[]>(loadArray<unknown>(STORAGE_KEYS.mistakes).filter((id): id is string => typeof id === 'string'))
@@ -71,7 +83,7 @@ export const usePracticeStore = defineStore('practice', () => {
   const settings = ref<{ reviewMode: 'local' | 'ai' }>({
     reviewMode: storedSettings.reviewMode === 'ai' ? 'ai' : 'local',
   })
-  const questionSource = ref<'local' | 'api'>('local')
+  const allQuestions = questions
 
   watch(records, (value) => saveToStorage(STORAGE_KEYS.records, value), { deep: true })
   watch(favorites, (value) => saveToStorage(STORAGE_KEYS.favorites, value), { deep: true })
@@ -81,13 +93,13 @@ export const usePracticeStore = defineStore('practice', () => {
   watch(settings, (value) => saveToStorage(STORAGE_KEYS.settings, value), { deep: true })
 
   const favoriteQuestions = computed(() =>
-    allQuestions.value.filter((question) => favorites.value.includes(question.id)),
+    questions.value.filter((question) => favorites.value.includes(question.id)),
   )
   const mistakeQuestions = computed(() =>
-    allQuestions.value.filter((question) => mistakes.value.includes(question.id)),
+    questions.value.filter((question) => mistakes.value.includes(question.id)),
   )
   const projectQuestions = computed(() =>
-    allQuestions.value.filter((question) => question.category === '项目追问'),
+    questions.value.filter((question) => question.category === '项目追问'),
   )
 
   const totalPracticeCount = computed(() => records.value.length)
@@ -112,7 +124,8 @@ export const usePracticeStore = defineStore('practice', () => {
 
   const categoryMastery = computed(() =>
     categories.map((category) => {
-      const categoryQuestions = allQuestions.value.filter((item) => item.category === category)
+      const total = categoryStats.value[category] ?? 0
+      const categoryQuestions = questions.value.filter((item) => item.category === category)
       const mastered = categoryQuestions.filter(
         (item) => masteryMap.value[item.id]?.level === '熟练',
       ).length
@@ -120,30 +133,59 @@ export const usePracticeStore = defineStore('practice', () => {
 
       return {
         category,
-        total: categoryQuestions.length,
+        total,
         practiced,
         mastered,
-        rate: categoryQuestions.length === 0 ? 0 : Math.round((mastered / categoryQuestions.length) * 100),
+        rate: total === 0 ? 0 : Math.round((mastered / total) * 100),
       }
     }),
   )
 
   function getQuestionById(questionId: string) {
-    return allQuestions.value.find((question) => question.id === questionId)
+    return questions.value.find((question) => question.id === questionId)
   }
 
-  async function loadQuestionBank() {
+  function useLocalQuestionFallback(error?: unknown) {
+    questions.value = questionBank
+    totalQuestions.value = questionBank.length
+    categoryStats.value = getLocalCategoryStats()
+    questionSource.value = 'local'
+    questionLoadError.value = error instanceof Error ? error.message : error ? String(error) : null
+  }
+
+  async function loadCategoryStats() {
     try {
-      const result = await fetchQuestions()
-      if (result.items.length > 0) {
-        allQuestions.value = result.items
-        questionSource.value = 'api'
-      }
-    } catch {
-      allQuestions.value = questionBank
-      questionSource.value = 'local'
+      const stats = await fetchQuestionCategories()
+      categoryStats.value = Object.fromEntries(stats.map((item) => [item.category, item.count]))
+      questionSource.value = 'api'
+      questionLoadError.value = null
+    } catch (error) {
+      useLocalQuestionFallback(error)
     }
   }
+
+  async function loadQuestions() {
+    isLoadingQuestions.value = true
+    try {
+      const result = await fetchAllQuestions()
+      questions.value = result.items.length > 0 ? result.items : questionBank
+      totalQuestions.value = result.total || questions.value.length
+      questionSource.value = result.items.length > 0 ? 'api' : 'local'
+      questionLoadError.value = null
+
+      if (questionSource.value === 'api') {
+        await loadCategoryStats()
+      } else {
+        categoryStats.value = getLocalCategoryStats()
+      }
+    } catch (error) {
+      useLocalQuestionFallback(error)
+    } finally {
+      isLoadingQuestions.value = false
+    }
+  }
+
+  const loadQuestionBank = loadQuestions
 
   function isFavorite(questionId: string) {
     return favorites.value.includes(questionId)
@@ -197,7 +239,7 @@ export const usePracticeStore = defineStore('practice', () => {
   function getFilteredQuestions(filters: PracticeFilters) {
     const search = filters.search.trim().toLowerCase()
 
-    return allQuestions.value.filter((question) => {
+    return questions.value.filter((question) => {
       const matchesCategory = filters.category === '全部' || question.category === filters.category
       const matchesType = filters.type === '全部' || question.type === filters.type
       const matchesDifficulty = filters.difficulty === '全部' || question.difficulty === filters.difficulty
@@ -277,7 +319,12 @@ export const usePracticeStore = defineStore('practice', () => {
 
   return {
     allQuestions,
+    questions,
+    totalQuestions,
+    categoryStats,
     questionSource,
+    isLoadingQuestions,
+    questionLoadError,
     records,
     favorites,
     mistakes,
@@ -292,6 +339,8 @@ export const usePracticeStore = defineStore('practice', () => {
     masteredCount,
     categoryMastery,
     getQuestionById,
+    loadQuestions,
+    loadCategoryStats,
     loadQuestionBank,
     getFilteredQuestions,
     getQuestionPracticeRecords,

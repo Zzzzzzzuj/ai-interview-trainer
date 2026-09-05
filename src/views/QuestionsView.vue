@@ -20,7 +20,7 @@ const difficultyOptions = ['全部', 'easy', 'medium', 'hard']
 
 const filteredQuestions = computed(() => store.getFilteredQuestions(filters.value))
 
-onMounted(() => store.loadQuestionBank())
+onMounted(() => store.loadQuestions())
 </script>
 
 <template>
@@ -43,7 +43,9 @@ onMounted(() => store.loadQuestionBank())
       </label>
     </div>
 
-    <div class="subtle-banner">共找到 {{ filteredQuestions.length }} 道题</div>
+    <div class="subtle-banner">
+      共找到 {{ filteredQuestions.length }} 道题，当前数据源：{{ store.questionSource === 'api' ? '数据库题库' : '本地题库 fallback' }}
+    </div>
 
     <div class="question-grid">
       <QuestionCard

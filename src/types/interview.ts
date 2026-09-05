@@ -3,14 +3,17 @@ export type Difficulty = 'easy' | 'medium' | 'hard'
 export type ReviewLevel = '不会' | '一般' | '熟练'
 
 export const categories = [
+  'HTML',
+  'CSS',
   'JavaScript 基础',
   'Vue',
   'React',
-  '浏览器原理',
-  'HTTP / 网络',
-  '前端工程化',
   '性能优化',
+  '前端工程化',
+  'HTTP / 网络',
+  '浏览器原理',
   '手写代码',
+  '代码输出',
   'AI Agent',
   'RAG',
   '项目追问',

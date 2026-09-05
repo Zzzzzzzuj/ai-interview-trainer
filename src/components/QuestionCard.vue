@@ -20,6 +20,11 @@ const showCode = ref(false)
 const showAnswer = ref(false)
 
 const difficultyClass = computed(() => `difficulty-${props.question.difficulty}`)
+const hasCodeExample = computed(() => Boolean(props.question.codeExample?.trim()))
+const isCodeOutputQuestion = computed(() =>
+  props.question.category === '代码输出' ||
+  /输出是什么|输出结果|代码输出|执行结果|打印结果|console\.log/.test(props.question.question)
+)
 </script>
 
 <template>
@@ -44,6 +49,11 @@ const difficultyClass = computed(() => `difficulty-${props.question.difficulty}`
       </span>
     </div>
 
+    <CodeExampleBlock
+      v-if="isCodeOutputQuestion && hasCodeExample && question.codeExample"
+      :code="question.codeExample"
+    />
+
     <div class="card-actions">
       <button class="text-button" @click="showAnswer = !showAnswer">
         {{ showAnswer ? '隐藏答案' : '查看答案' }}
@@ -51,7 +61,7 @@ const difficultyClass = computed(() => `difficulty-${props.question.difficulty}`
       <button class="text-button" @click="showExplanation = !showExplanation">
         {{ showExplanation ? '隐藏题解' : '查看题解' }}
       </button>
-      <button v-if="question.codeExample" class="text-button" @click="showCode = !showCode">
+      <button v-if="hasCodeExample && !isCodeOutputQuestion" class="text-button" @click="showCode = !showCode">
         {{ showCode ? '隐藏代码例子' : '查看代码例子' }}
       </button>
       <button v-if="$attrs['data-removable'] !== undefined" class="text-button danger-text" @click="emit('removeMistake', question.id)">
@@ -62,7 +72,10 @@ const difficultyClass = computed(() => `difficulty-${props.question.difficulty}`
     <p v-if="showAnswer" class="answer-text">{{ question.answer }}</p>
     <p v-if="showExplanation" class="explanation-text">{{ question.explanation }}</p>
 
-    <CodeExampleBlock v-if="showCode && question.codeExample" :code="question.codeExample" />
+    <CodeExampleBlock
+      v-if="showCode && hasCodeExample && !isCodeOutputQuestion && question.codeExample"
+      :code="question.codeExample"
+    />
 
     <div v-if="question.followUps?.length" class="follow-up-block">
       <p class="muted-label">可能追问</p>

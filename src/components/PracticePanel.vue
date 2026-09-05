@@ -29,7 +29,7 @@ const difficultyOptions = ['全部', 'easy', 'medium', 'hard']
 const availableQuestions = computed(() => store.getFilteredQuestions(filters.value))
 const currentQuestion = computed(() => availableQuestions.value[currentIndex.value] ?? null)
 
-onMounted(() => store.loadQuestionBank())
+onMounted(() => store.loadQuestions())
 
 function resetQuestionState() {
   choiceFeedback.value = null
@@ -89,7 +89,8 @@ async function submitShortAnswer(answer: string) {
     </div>
 
     <div class="subtle-banner">
-      当前题量：{{ availableQuestions.length }} / 总题量：{{ store.allQuestions.length }}
+      当前题量：{{ availableQuestions.length }} / 总题量：{{ store.totalQuestions }} ·
+      {{ store.questionSource === 'api' ? '数据库题库' : '本地题库 fallback' }}
     </div>
 
     <div v-if="currentQuestion" class="practice-layout">

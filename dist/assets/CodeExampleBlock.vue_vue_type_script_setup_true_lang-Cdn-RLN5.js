@@ -1,1 +1,0 @@
-import{d as a,o as c,c as t,a as e,t as n}from"./index-2mvFlmX8.js";const d={class:"code-block"},p=a({__name:"CodeExampleBlock",props:{code:{}},setup(s){return(l,o)=>(c(),t("div",d,[o[0]||(o[0]=e("div",{class:"code-head"},"代码例子",-1)),e("pre",null,[e("code",null,n(s.code),1)])]))}});export{p as _};

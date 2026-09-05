@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import StatsCard from '@/components/StatsCard.vue'
-import { questionCountByCategory } from '@/data/questions'
 import { usePracticeStore } from '@/stores/practiceStore'
 
 const store = usePracticeStore()
+
+onMounted(() => store.loadQuestions())
 </script>
 
 <template>
@@ -24,7 +26,7 @@ const store = usePracticeStore()
       <StatsCard title="熟练题数" :value="store.masteredCount" />
       <StatsCard title="错题数" :value="store.mistakes.length" />
       <StatsCard title="收藏题数" :value="store.favorites.length" />
-      <StatsCard title="内置题库总量" :value="store.allQuestions.length" />
+      <StatsCard title="题库总量" :value="store.totalQuestions" />
     </div>
 
     <div class="two-column">
@@ -46,8 +48,11 @@ const store = usePracticeStore()
 
       <section class="panel-section">
         <h3>题库分布</h3>
+        <p class="stats-hint">
+          当前数据源：{{ store.questionSource === 'api' ? '数据库题库' : '本地题库 fallback' }}
+        </p>
         <div class="tag-list spaced">
-          <span v-for="(count, category) in questionCountByCategory" :key="category" class="tag">
+          <span v-for="(count, category) in store.categoryStats" :key="category" class="tag">
             {{ category }} · {{ count }}
           </span>
         </div>

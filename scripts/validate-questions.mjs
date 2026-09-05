@@ -1,8 +1,8 @@
 import { allQuestions } from '../src/data/questions/index.ts'
 
 const categories = new Set([
-  'JavaScript 基础', 'Vue', 'React', '浏览器原理', 'HTTP / 网络', '前端工程化',
-  '性能优化', '手写代码', 'AI Agent', 'RAG', '项目追问',
+  'HTML', 'CSS', 'JavaScript 基础', 'Vue', 'React', '性能优化', '前端工程化',
+  'HTTP / 网络', '浏览器原理', '手写代码', '代码输出', 'AI Agent', 'RAG', '项目追问',
 ])
 const difficulties = new Set(['easy', 'medium', 'hard'])
 const types = new Set(['choice', 'short_answer'])

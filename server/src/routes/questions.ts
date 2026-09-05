@@ -23,7 +23,7 @@ questionsRouter.get('/', async (request, response, next) => {
       ...(keyword ? { OR: [{ question: { contains: keyword } }, { keywords: { contains: keyword } }] } : {}),
     }
     const [items, total] = await prisma.$transaction([
-      prisma.question.findMany({ where, skip: (page - 1) * pageSize, take: pageSize, orderBy: { createdAt: 'desc' } }),
+      prisma.question.findMany({ where, skip: (page - 1) * pageSize, take: pageSize, orderBy: { id: 'asc' } }),
       prisma.question.count({ where }),
     ])
     response.json({ items: items.map(serializeQuestion), total, page, pageSize })
