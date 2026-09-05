@@ -1,6 +1,6 @@
 -- CreateTable
 CREATE TABLE "Question" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "category" TEXT NOT NULL,
     "type" TEXT NOT NULL,
     "difficulty" TEXT NOT NULL,
@@ -16,13 +16,15 @@ CREATE TABLE "Question" (
     "sourceUrl" TEXT,
     "quality" TEXT,
     "priority" INTEGER,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Question_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "PracticeRecord" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "questionId" TEXT NOT NULL,
     "category" TEXT NOT NULL,
     "type" TEXT NOT NULL,
@@ -30,14 +32,18 @@ CREATE TABLE "PracticeRecord" (
     "selectedOption" TEXT,
     "userAnswer" TEXT,
     "reviewResult" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "PracticeRecord_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "FavoriteQuestion" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "questionId" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "FavoriteQuestion_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex

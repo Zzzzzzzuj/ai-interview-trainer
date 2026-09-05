@@ -1,7 +1,8 @@
 import type { InterviewQuestion, ReviewResult } from '@/types/interview'
 import { localRuleReview } from '@/utils/scoring'
+import { getApiBaseUrl } from './apiConfig'
 
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3001/api'
+const apiBaseUrl = getApiBaseUrl()
 const reviewTimeoutMs = 30000
 
 function isReviewResult(value: unknown): value is ReviewResult {

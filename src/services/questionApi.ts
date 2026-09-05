@@ -1,4 +1,5 @@
 import type { InterviewQuestion } from '@/types/interview'
+import { getApiBaseUrl } from './apiConfig'
 
 interface QuestionListResponse {
   items: InterviewQuestion[]
@@ -12,7 +13,7 @@ export interface QuestionCategoryStat {
   count: number
 }
 
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3001/api'
+const apiBaseUrl = getApiBaseUrl()
 
 export async function fetchQuestions(page = 1, pageSize = 100): Promise<QuestionListResponse> {
   const response = await fetch(`${apiBaseUrl}/questions?page=${page}&pageSize=${pageSize}`)
