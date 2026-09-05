@@ -4,8 +4,7 @@ export type ReviewLevel = '不会' | '一般' | '熟练'
 export type PracticeMode = 'random' | 'sequential' | 'mistakes' | 'favorites' | 'highFrequency'
 
 export const categories = [
-  'HTML',
-  'CSS',
+  'HTML / CSS',
   'JavaScript 基础',
   'Vue',
   'React',
@@ -43,7 +42,7 @@ export interface InterviewQuestion {
   sourceName?: string
   sourceUrl?: string
   quality?: string
-  priority?: 'high' | 'medium' | number | null
+  priority?: 'high' | 'medium' | 'low' | number | null
 }
 
 export interface ReviewResult {

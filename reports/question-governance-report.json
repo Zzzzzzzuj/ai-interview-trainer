@@ -1,0 +1,143 @@
+{
+  "generatedAt": "2026-09-05T08:54:31.262Z",
+  "before": {
+    "categoryStats": {
+      "JavaScript 基础": 104,
+      "Vue": 113,
+      "React": 3,
+      "HTTP / 网络": 66,
+      "前端工程化": 26,
+      "浏览器原理": 73,
+      "性能优化": 25,
+      "手写代码": 2,
+      "HTML": 20,
+      "CSS": 58,
+      "代码输出": 40
+    },
+    "priorityStats": {
+      "high": 389,
+      "medium": 141
+    }
+  },
+  "currentRunBefore": {
+    "categoryStats": {
+      "JavaScript 基础": 86,
+      "HTML / CSS": 121,
+      "手写代码": 15,
+      "Vue": 96,
+      "React": 2,
+      "HTTP / 网络": 64,
+      "前端工程化": 25,
+      "代码输出": 45,
+      "浏览器原理": 53,
+      "性能优化": 23
+    },
+    "priorityStats": {
+      "high": 226,
+      "low": 125,
+      "medium": 179
+    }
+  },
+  "after": {
+    "categoryStats": {
+      "JavaScript 基础": 86,
+      "HTML / CSS": 121,
+      "手写代码": 15,
+      "Vue": 96,
+      "React": 2,
+      "HTTP / 网络": 64,
+      "前端工程化": 25,
+      "代码输出": 45,
+      "浏览器原理": 53,
+      "性能优化": 23
+    },
+    "priorityStats": {
+      "high": 226,
+      "medium": 179,
+      "low": 125
+    },
+    "categoryPriorityStats": {
+      "代码输出": {
+        "high": 43,
+        "medium": 2,
+        "low": 0
+      },
+      "浏览器原理": {
+        "high": 4,
+        "medium": 49,
+        "low": 0
+      },
+      "前端工程化": {
+        "high": 18,
+        "medium": 6,
+        "low": 1
+      },
+      "手写代码": {
+        "high": 3,
+        "medium": 12,
+        "low": 0
+      },
+      "性能优化": {
+        "high": 10,
+        "medium": 13,
+        "low": 0
+      },
+      "HTML / CSS": {
+        "high": 0,
+        "medium": 0,
+        "low": 121
+      },
+      "HTTP / 网络": {
+        "high": 13,
+        "medium": 50,
+        "low": 1
+      },
+      "JavaScript 基础": {
+        "high": 42,
+        "medium": 42,
+        "low": 2
+      },
+      "React": {
+        "high": 1,
+        "medium": 1,
+        "low": 0
+      },
+      "Vue": {
+        "high": 92,
+        "medium": 4,
+        "low": 0
+      }
+    },
+    "topTags": {
+      "browser": 279,
+      "http": 240,
+      "storage": 230,
+      "performance": 189,
+      "js-basic": 164,
+      "vue-reactivity": 156,
+      "css": 125,
+      "html": 121,
+      "vue": 116,
+      "network": 90,
+      "promise": 71,
+      "event-loop": 48,
+      "code-output": 45,
+      "prototype": 33,
+      "engineering": 32,
+      "this": 29,
+      "react": 17,
+      "handwriting": 15,
+      "closure": 13,
+      "ai-agent": 7
+    }
+  },
+  "recategorizedCount": 0,
+  "cumulativeRecategorizedCount": 139,
+  "priorityChangedCount": 0,
+  "jsonQuestionCount": 508,
+  "databaseQuestionCount": 530,
+  "gapSuggestions": [
+    "React 当前题量仍偏少，建议补充 Hooks 规则、状态更新批处理、组件渲染优化、受控/非受控组件、React Router 和工程实践追问。",
+    "手写代码当前题量仍偏少，建议补充 debounce、throttle、deepClone、Promise.all、Promise.race、instanceof、new、call/apply/bind、并发请求控制和发布订阅。"
+  ]
+}

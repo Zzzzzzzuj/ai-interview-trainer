@@ -75,6 +75,7 @@ function normalizePriority(value: unknown) {
   const normalized = value.trim().toLowerCase()
   if (normalized === 'high') return 100
   if (normalized === 'medium') return 50
+  if (normalized === 'low') return 10
   const numericValue = Number(normalized)
   return Number.isFinite(numericValue) ? numericValue : null
 }

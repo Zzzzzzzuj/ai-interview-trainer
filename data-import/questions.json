@@ -1,7 +1,7 @@
 [
   {
     "id": "paste-js-event-loop-analysis-01",
-    "category": "JavaScript 基础",
+    "category": "代码输出",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "遇到 Promise、setTimeout 和 async/await 混合的代码输出题，你会怎样分析执行顺序？",
@@ -217,7 +217,7 @@
   },
   {
     "id": "paste-js-async-await-error-01",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "async/await 如何处理错误，多个独立请求如何并发执行？",
@@ -249,7 +249,6 @@
     "tags": [
       "event-loop",
       "handwriting",
-      "js-basic",
       "promise"
     ]
   },
@@ -328,7 +327,7 @@
   },
   {
     "id": "paste-vue-component-communication-01",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Vue 项目中父子、跨层级和全局组件通信分别怎么选？",
@@ -355,16 +354,17 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "css",
+      "html",
       "js-basic",
       "vue"
     ]
   },
   {
     "id": "paste-vue-vmodel-principle-01",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Vue3 组件上的 v-model 是如何工作的？",
@@ -393,9 +393,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "css",
+      "html",
       "vue"
     ]
   },
@@ -438,7 +439,7 @@
   },
   {
     "id": "paste-vue-router-modes-01",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Vue Router 的 hash 和 history 模式有什么区别，history 为什么需要服务端配置？",
@@ -467,16 +468,17 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "vue"
     ]
   },
   {
     "id": "paste-vue-navigation-guards-01",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "你会怎样设计 Vue Router 的登录鉴权导航守卫？",
@@ -504,8 +506,9 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
+      "css",
       "html",
       "vue"
     ]
@@ -547,7 +550,7 @@
   },
   {
     "id": "paste-vue-composition-api-01",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Composition API 相比 Options API 的主要价值是什么？",
@@ -576,16 +579,16 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "css",
-      "js-basic",
-      "vue"
+      "html",
+      "js-basic"
     ]
   },
   {
     "id": "paste-vue-virtual-dom-diff-01",
-    "category": "Vue",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "虚拟 DOM 和 diff 在 Vue 中解决什么问题，key 为什么重要？",
@@ -614,7 +617,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "handwriting",
@@ -625,7 +628,7 @@
   },
   {
     "id": "paste-browser-script-attributes-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "script 的普通、defer 和 async 加载执行行为有什么区别？",
@@ -654,16 +657,17 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "promise"
     ]
   },
   {
     "id": "paste-browser-render-pipeline-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "浏览器从 HTML 到页面显示大致经历哪些渲染阶段？",
@@ -692,7 +696,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -732,7 +736,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "ai-agent",
       "browser",
@@ -810,7 +814,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -886,7 +890,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -1067,14 +1071,14 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "engineering"
     ]
   },
   {
     "id": "paste-performance-cdn-01",
-    "category": "性能优化",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "CDN 如何提升静态资源访问性能，前端发布时要配合什么缓存策略？",
@@ -1100,9 +1104,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "performance",
@@ -1178,7 +1183,7 @@
   },
   {
     "id": "paste-performance-image-optimization-01",
-    "category": "性能优化",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "前端图片优化可以从哪些方面入手？",
@@ -1203,7 +1208,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -1472,7 +1477,7 @@
   },
   {
     "id": "paste-vue-ssr-01",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "SSR 的收益和前端实现时的主要挑战是什么？",
@@ -1497,12 +1502,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
-      "performance",
-      "vue"
+      "performance"
     ]
   },
   {
@@ -1535,7 +1540,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "promise",
       "vue"
@@ -1684,7 +1689,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -1695,7 +1700,7 @@
   },
   {
     "id": "paste-network-cache-headers-01",
-    "category": "HTTP / 网络",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Cache-Control、ETag 和 Last-Modified 如何配合缓存？",
@@ -1724,9 +1729,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "network",
@@ -1764,7 +1770,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -1803,7 +1809,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -1813,7 +1819,7 @@
   },
   {
     "id": "paste-browser-xss-csrf-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "XSS 与 CSRF 的攻击方式和防御手段有什么区别？",
@@ -1842,9 +1848,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage",
@@ -1893,7 +1900,7 @@
   },
   {
     "id": "paste-browser-service-worker-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Service Worker 能做什么，使用时有哪些生命周期和缓存风险？",
@@ -1922,9 +1929,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "network",
@@ -1962,7 +1970,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "ai-agent",
       "browser",
@@ -2121,7 +2129,7 @@
   },
   {
     "id": "paste-browser-src-href-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "HTML 中 src 和 href 的语义及加载影响有什么区别？",
@@ -2150,9 +2158,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "js-basic",
       "promise",
@@ -2162,7 +2171,7 @@
   },
   {
     "id": "paste-browser-semantic-html-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "HTML 语义化有什么价值，常用语义标签有哪些？",
@@ -2191,15 +2200,16 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html"
     ]
   },
   {
     "id": "paste-browser-doctype-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "DOCTYPE 的作用是什么，标准模式和怪异模式有何影响？",
@@ -2228,7 +2238,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -2237,7 +2247,7 @@
   },
   {
     "id": "paste-browser-responsive-image-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "srcset 和 sizes 如何帮助响应式图片优化？",
@@ -2266,9 +2276,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "performance",
       "vue-reactivity"
@@ -2276,7 +2287,7 @@
   },
   {
     "id": "paste-browser-canvas-svg-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Canvas 和 SVG 的差异及适用场景是什么？",
@@ -2305,7 +2316,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -2315,7 +2326,7 @@
   },
   {
     "id": "paste-browser-iframe-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "iframe 的优缺点和安全注意点有哪些？",
@@ -2344,9 +2355,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "network"
@@ -2354,7 +2366,7 @@
   },
   {
     "id": "paste-browser-css-box-model-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "CSS 盒模型和 box-sizing 应该如何解释？",
@@ -2383,15 +2395,16 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
-      "css"
+      "css",
+      "html"
     ]
   },
   {
     "id": "paste-browser-css-bfc-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "BFC 是什么，常用来解决哪些布局问题？",
@@ -2420,15 +2433,16 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
-      "css"
+      "css",
+      "html"
     ]
   },
   {
     "id": "paste-browser-css-flex-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Flex 布局中主轴、交叉轴和常用对齐属性如何理解？",
@@ -2457,10 +2471,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
-      "css"
+      "css",
+      "html"
     ]
   },
   {
@@ -2501,7 +2516,7 @@
   },
   {
     "id": "paste-browser-css-specificity-01",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "CSS 选择器优先级和 !important 应该如何处理？",
@@ -2530,10 +2545,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
-      "css"
+      "css",
+      "html"
     ]
   },
   {
@@ -2575,7 +2591,7 @@
   },
   {
     "id": "paste-full-html-001-1-src和href的区别",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "src和href的区别",
@@ -2605,10 +2621,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<script src =”js.js”></script>",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage",
@@ -2618,7 +2635,7 @@
   },
   {
     "id": "paste-full-html-002-2-对html语义化的理解",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "对HTML语义化的理解",
@@ -2646,10 +2663,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<header></header>  头部\n\n<nav></nav>  导航栏\n\n<section></section>  区块（有语义化的div）\n\n<main></main>  主要区域\n\n<article></article>  主要内容\n\n<aside></aside>  侧边栏\n\n<footer></footer>  底部",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -2657,7 +2675,7 @@
   },
   {
     "id": "paste-full-html-003-3-doctype-档类型-的作",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "DOCTYPE(⽂档类型) 的作⽤",
@@ -2687,7 +2705,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -2699,7 +2717,7 @@
   },
   {
     "id": "paste-full-html-004-4-script标签中defer和async的区别",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "script标签中defer和async的区别",
@@ -2729,9 +2747,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "promise",
@@ -2740,7 +2759,7 @@
   },
   {
     "id": "paste-full-html-005-5-常-的meta标签有哪些",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "常⽤的meta标签有哪些",
@@ -2768,10 +2787,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<meta charset=\"UTF-8\" >",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "network",
@@ -2780,7 +2800,7 @@
   },
   {
     "id": "paste-full-html-006-6-html5有哪些更新",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "HTML5有哪些更新",
@@ -2808,10 +2828,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<audio src='' controls autoplay loop='true'></audio>",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -2819,7 +2840,7 @@
   },
   {
     "id": "paste-full-html-007-7-img的srcset属性的作",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "img的srcset属性的作⽤？",
@@ -2847,10 +2868,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<img src=\"image-128.png\" srcset=\"image-256.png 2x\" />",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage",
@@ -2859,7 +2881,7 @@
   },
   {
     "id": "paste-full-html-008-8-行内元素有哪些-块级元素有哪些-空-void-元素有那些",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？",
@@ -2889,9 +2911,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -2899,7 +2922,7 @@
   },
   {
     "id": "paste-full-html-009-9-对-web-worker-的理解",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "对 web worker 的理解",
@@ -2929,9 +2952,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "js-basic",
@@ -2941,7 +2965,7 @@
   },
   {
     "id": "paste-full-html-010-10-html5的离线储存怎么使用-它的工作原理是什么",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "HTML5的离线储存怎么使用，它的工作原理是什么",
@@ -2970,11 +2994,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<html lang=\"en\" manifest=\"index.manifest\">",
     "tags": [
       "ai-agent",
       "browser",
+      "css",
       "html",
       "http",
       "network",
@@ -2983,7 +3008,7 @@
   },
   {
     "id": "paste-full-html-011-11-浏览器是如何对-html5-的离线储存资源进行管理和加载",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "浏览器是如何对 HTML5 的离线储存资源进行管理和加载？",
@@ -3013,9 +3038,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "network",
@@ -3024,7 +3050,7 @@
   },
   {
     "id": "paste-full-html-012-12-title与h1的区别-b与strong的区别-i与em的区别",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "title与h1的区别、b与strong的区别、i与em的区别？",
@@ -3054,7 +3080,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -3065,7 +3091,7 @@
   },
   {
     "id": "paste-full-html-013-13-iframe-有那些优点和缺点",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "iframe 有那些优点和缺点？",
@@ -3095,9 +3121,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "network",
@@ -3106,7 +3133,7 @@
   },
   {
     "id": "paste-full-html-014-14-label-的作用是什么-如何使用",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "label 的作用是什么？如何使用？",
@@ -3136,10 +3163,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<label for=\"mobile\">Number:</label>\n<input type=\"text\" id=\"mobile\"/>",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -3147,7 +3175,7 @@
   },
   {
     "id": "paste-full-html-015-15-canvas和svg的区别",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Canvas和SVG的区别",
@@ -3177,9 +3205,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "performance",
@@ -3188,7 +3217,7 @@
   },
   {
     "id": "paste-full-html-016-16-head-标签有什么作用-其中什么标签必不可少",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "head 标签有什么作用，其中什么标签必不可少？",
@@ -3218,9 +3247,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -3228,7 +3258,7 @@
   },
   {
     "id": "paste-full-html-017-17-文档声明-doctype-和有何作用-严格模式与混杂模式如何区分-它们有何意义",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "文档声明（Doctype）和有何作用? 严格模式与混杂模式如何区分？它们有何意义?",
@@ -3258,7 +3288,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -3269,7 +3299,7 @@
   },
   {
     "id": "paste-full-html-018-18-浏览器乱码的原因是什么-如何解决",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "浏览器乱码的原因是什么？如何解决？",
@@ -3298,9 +3328,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -3308,7 +3339,7 @@
   },
   {
     "id": "paste-full-html-019-19-渐进增强和优雅降级之间的区别",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "渐进增强和优雅降级之间的区别",
@@ -3338,9 +3369,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -3348,7 +3380,7 @@
   },
   {
     "id": "paste-full-html-020-20-说一下-html5-drag-api",
-    "category": "HTML",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "说一下 HTML5 drag API",
@@ -3378,10 +3410,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "ai-agent",
       "browser",
+      "css",
       "html",
       "http",
       "storage"
@@ -3389,7 +3422,7 @@
   },
   {
     "id": "paste-full-css-001-1-css选择器及其优先级",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "CSS选择器及其优先级",
@@ -3419,10 +3452,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3431,7 +3465,7 @@
   },
   {
     "id": "paste-full-css-002-2-css中可继承与不可继承属性有哪些",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "CSS中可继承与不可继承属性有哪些",
@@ -3461,10 +3495,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "prototype",
@@ -3474,7 +3509,7 @@
   },
   {
     "id": "paste-full-css-003-3-display的属性值及其作用",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "display的属性值及其作用",
@@ -3504,10 +3539,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3516,7 +3552,7 @@
   },
   {
     "id": "paste-full-css-004-4-display的block-inline和inline-block的区别",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "display的block、inline和inline-block的区别",
@@ -3546,10 +3582,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3558,7 +3595,7 @@
   },
   {
     "id": "paste-full-css-005-5-隐藏元素的方法有哪些",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "隐藏元素的方法有哪些",
@@ -3588,10 +3625,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3600,7 +3638,7 @@
   },
   {
     "id": "paste-full-css-006-6-link和-import的区别",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "link和@import的区别",
@@ -3630,10 +3668,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3642,7 +3681,7 @@
   },
   {
     "id": "paste-full-css-007-7-transition和animation的区别",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "transition和animation的区别",
@@ -3672,10 +3711,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3684,7 +3724,7 @@
   },
   {
     "id": "paste-full-css-008-8-display-none与visibility-hidden的区别",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "display:none与visibility:hidden的区别",
@@ -3714,10 +3754,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3726,7 +3767,7 @@
   },
   {
     "id": "paste-full-css-009-9-伪元素和伪类的区别和作用",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "伪元素和伪类的区别和作用？",
@@ -3756,11 +3797,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "p::before {content:\"第一章：\";}\np::after {content:\"Hot!\";}\np::first-line {background:red;}\np::first-letter {font-size:30px;}",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3769,7 +3811,7 @@
   },
   {
     "id": "paste-full-css-010-10-对requestanimationframe的理解",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对requestAnimationframe的理解",
@@ -3799,10 +3841,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3811,7 +3854,7 @@
   },
   {
     "id": "paste-full-css-011-11-对盒模型的理解",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对盒模型的理解",
@@ -3841,17 +3884,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-012-12-为什么有时候-translate来改变位置-不是定位",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "为什么有时候⽤translate来改变位置⽽不是定位？",
@@ -3881,10 +3925,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3893,7 +3938,7 @@
   },
   {
     "id": "paste-full-css-013-13-li-与-li-之间有看不见的空白间隔是什么原因引起的-如何解决",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "li 与 li 之间有看不见的空白间隔是什么原因引起的？如何解决？",
@@ -3923,10 +3968,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3935,7 +3981,7 @@
   },
   {
     "id": "paste-full-css-014-14-css3中有哪些新特性",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "CSS3中有哪些新特性",
@@ -3965,10 +4011,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -3977,7 +4024,7 @@
   },
   {
     "id": "paste-full-css-015-15-替换元素的概念及计算规则",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "替换元素的概念及计算规则",
@@ -4007,10 +4054,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4019,7 +4067,7 @@
   },
   {
     "id": "paste-full-css-016-16-常见的图片格式及使用场景",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "常见的图片格式及使用场景",
@@ -4049,10 +4097,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4061,7 +4110,7 @@
   },
   {
     "id": "paste-full-css-017-17-对-csssprites-的理解",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "对 CSSSprites 的理解",
@@ -4091,10 +4140,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4103,7 +4153,7 @@
   },
   {
     "id": "paste-full-css-018-18-什么是物理像素-逻辑像素和像素密度-为什么在移动端开发时需要用到-3x-2x这种图片",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "什么是物理像素，逻辑像素和像素密度，为什么在移动端开发时需要用到@3x, @2x这种图片？",
@@ -4133,11 +4183,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "my-image { background: (low.png); }\n@media only screen and (min-device-pixel-ratio: 1.5) {\n  #my-image { background: (high.png); }\n}",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4146,7 +4197,7 @@
   },
   {
     "id": "paste-full-css-019-19-margin-和-padding-的使用场景",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "margin 和 padding 的使用场景",
@@ -4176,10 +4227,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4188,7 +4240,7 @@
   },
   {
     "id": "paste-full-css-020-20-对line-height-的理解及其赋值方式",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "对line-height 的理解及其赋值方式",
@@ -4218,10 +4270,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4230,7 +4283,7 @@
   },
   {
     "id": "paste-full-css-021-21-css-优化和提高性能的方法有哪些",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "CSS 优化和提高性能的方法有哪些？",
@@ -4260,10 +4313,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4272,7 +4326,7 @@
   },
   {
     "id": "paste-full-css-022-22-css预处理器-后处理器是什么-为什么要使用它们",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "CSS预处理器/后处理器是什么？为什么要使用它们？",
@@ -4302,10 +4356,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4314,7 +4369,7 @@
   },
   {
     "id": "paste-full-css-023-23-before-和-after-的双冒号和单冒号有什么区别",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "::before 和 :after 的双冒号和单冒号有什么区别？",
@@ -4344,10 +4399,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4356,7 +4412,7 @@
   },
   {
     "id": "paste-full-css-024-24-display-inline-block-什么时候会显示间隙",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "display:inline-block 什么时候会显示间隙？",
@@ -4386,10 +4442,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4398,7 +4455,7 @@
   },
   {
     "id": "paste-full-css-025-25-单行-多行文本溢出隐藏",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "单行、多行文本溢出隐藏",
@@ -4428,11 +4485,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "overflow: hidden;            // 溢出隐藏\ntext-overflow: ellipsis;      // 溢出用省略号显示\nwhite-space: nowrap;         // 规定段落中的文本不进行换行",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4441,7 +4499,7 @@
   },
   {
     "id": "paste-full-css-026-26-sass-less-是什么-为什么要使用他们",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Sass、Less 是什么？为什么要使用他们？",
@@ -4471,10 +4529,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4483,7 +4542,7 @@
   },
   {
     "id": "paste-full-css-027-27-对媒体查询的理解",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对媒体查询的理解？",
@@ -4513,11 +4572,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<!-- link元素中的CSS媒体查询 --> \n<link rel=\"stylesheet\" media=\"(max-width: 800px)\" href=\"example.css\" /> \n<!-- 样式表中的CSS媒体查询 --> \n<style> \n@media (max-width: 600px) { \n  .facet_sidebar { \n    display: none; \n  } \n}\n</style>",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4526,7 +4586,7 @@
   },
   {
     "id": "paste-full-css-028-28-对-css-工程化的理解",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对 CSS 工程化的理解",
@@ -4556,11 +4616,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
       "engineering",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4569,7 +4630,7 @@
   },
   {
     "id": "paste-full-css-029-29-如何判断元素是否到达可视区域",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "如何判断元素是否到达可视区域",
@@ -4599,10 +4660,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4611,7 +4673,7 @@
   },
   {
     "id": "paste-full-css-030-30-z-index属性在什么情况下会失效",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "z-index属性在什么情况下会失效",
@@ -4641,17 +4703,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-031-1-常见的css布局单位",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "常见的CSS布局单位",
@@ -4681,10 +4744,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4693,7 +4757,7 @@
   },
   {
     "id": "paste-full-css-032-2-px-em-rem的区别及使用场景",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "px、em、rem的区别及使用场景",
@@ -4723,10 +4787,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage",
       "vue-reactivity"
@@ -4734,7 +4799,7 @@
   },
   {
     "id": "paste-full-css-033-3-两栏布局的实现",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "两栏布局的实现",
@@ -4764,11 +4829,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": ".outer {\n  height: 100px;\n}\n.left {\n  float: left;\n  width: 200px;\n  background: tomato;\n}\n.right {\n  margin-left: 200px;\n  width: auto;\n  background: gold;\n}",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4777,7 +4843,7 @@
   },
   {
     "id": "paste-full-css-034-4-三栏布局的实现",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "三栏布局的实现",
@@ -4807,11 +4873,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": ".outer {\n  position: relative;\n  height: 100px;\n}\n\n.left {\n  position: absolute;\n  width: 100px;\n  height: 100px;\n  background: tomato;\n}\n\n.right {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 200px;\n  height: 100px;\n  background: gold;\n}\n\n.center {\n  margin-left: 100px;\n  margin-right: 200px;\n  height: 100px;\n  background: lightgreen;\n}",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4820,7 +4887,7 @@
   },
   {
     "id": "paste-full-css-035-5-水平垂直居中的实现",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "水平垂直居中的实现",
@@ -4850,18 +4917,19 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": ".parent {\n    position: relative;\n}\n \n.child {\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    transform: translate(-50%,-50%);\n}",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-036-6-如何根据设计稿进行移动端适配",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "如何根据设计稿进行移动端适配？",
@@ -4891,10 +4959,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -4903,7 +4972,7 @@
   },
   {
     "id": "paste-full-css-037-7-对flex布局的理解及其使用场景",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对Flex布局的理解及其使用场景",
@@ -4933,17 +5002,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-038-8-flex-1-表示什么",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "flex:1 表示什么",
@@ -4973,17 +5043,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-039-9-响应式设计的概念及基本原理",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "响应式设计的概念及基本原理",
@@ -5013,11 +5084,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<meta name=\"’viewport’\" content=\"”width=device-width,\" initial-scale=\"1.\" maximum-scale=\"1,user-scalable=no”\"/>",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5026,7 +5098,7 @@
   },
   {
     "id": "paste-full-css-040-10-实现-品-字布局",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "实现“品” 字布局",
@@ -5056,11 +5128,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<div class=\"div1\">1</div>\n<div class=\"div2\">2</div>\n<div class=\"div3\">3</div>",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5069,7 +5142,7 @@
   },
   {
     "id": "paste-full-css-041-11-实现九宫格布局",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "实现九宫格布局",
@@ -5099,11 +5172,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<div class=\"box\">\n  <ul>\n    <li>1</li>\n    <li>2</li>\n    <li>3</li>\n    <li>4</li>\n    <li>5</li>\n    <li>6</li>\n    <li>7</li>\n    <li>8</li>\n    <li>9</li>\n  </ul>\n</div>",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5112,7 +5186,7 @@
   },
   {
     "id": "paste-full-css-042-1-为什么需要清除浮动-清除浮动的方式",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "为什么需要清除浮动？清除浮动的方式",
@@ -5142,18 +5216,19 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": ".clearfix:after{\n    content: \"\\200B\";\n    display: table; \n    height: 0;\n    clear: both;\n  }\n  .clearfix{\n    *zoom: 1;\n  }",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-043-2-使用-clear-属性清除浮动的原理",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "使用 clear 属性清除浮动的原理？",
@@ -5183,18 +5258,19 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "clear:none|left|right|both",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-044-3-对bfc的理解-如何创建bfc",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对BFC的理解，如何创建BFC",
@@ -5224,18 +5300,19 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": ".left{\n     width: 100px;\n     height: 200px;\n     background: red;\n     float: left;\n }\n .right{\n     height: 300px;\n     background: blue;\n     overflow: hidden;\n }\n \n<div class=\"left\"></div>\n<div class=\"right\"></div>",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-045-4-什么是margin重叠问题-如何解决",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "什么是margin重叠问题？如何解决？",
@@ -5265,17 +5342,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-046-5-元素的层叠顺序",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "元素的层叠顺序",
@@ -5305,10 +5383,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5317,7 +5396,7 @@
   },
   {
     "id": "paste-full-css-047-6-position的属性有哪些-区别是什么",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "position的属性有哪些，区别是什么",
@@ -5347,17 +5426,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-048-7-display-float-position的关系",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "display、float、position的关系",
@@ -5387,17 +5467,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-049-8-absolute与fixed共同点与不同点",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "absolute与fixed共同点与不同点",
@@ -5427,10 +5508,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5439,7 +5521,7 @@
   },
   {
     "id": "paste-full-css-050-9-对-sticky-定位的理解",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对 sticky 定位的理解",
@@ -5469,10 +5551,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5481,7 +5564,7 @@
   },
   {
     "id": "paste-full-css-051-1-实现一个三角形",
-    "category": "CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "实现一个三角形",
@@ -5516,13 +5599,14 @@
     "tags": [
       "browser",
       "css",
+      "handwriting",
       "http",
       "storage"
     ]
   },
   {
     "id": "paste-full-css-052-2-实现一个扇形",
-    "category": "CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "实现一个扇形",
@@ -5557,6 +5641,7 @@
     "tags": [
       "browser",
       "css",
+      "handwriting",
       "http",
       "performance",
       "storage",
@@ -5565,7 +5650,7 @@
   },
   {
     "id": "paste-full-css-053-3-实现一个圆和半圆",
-    "category": "CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "实现一个圆和半圆",
@@ -5600,6 +5685,7 @@
     "tags": [
       "browser",
       "css",
+      "handwriting",
       "http",
       "performance",
       "storage",
@@ -5608,7 +5694,7 @@
   },
   {
     "id": "paste-full-css-054-4-实现一个宽高自适应的正方形",
-    "category": "CSS",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "实现一个宽高自适应的正方形",
@@ -5643,6 +5729,7 @@
     "tags": [
       "browser",
       "css",
+      "handwriting",
       "http",
       "performance",
       "storage",
@@ -5651,7 +5738,7 @@
   },
   {
     "id": "paste-full-css-055-4-画一个梯形",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "画一个梯形",
@@ -5681,11 +5768,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "<div class=\"trapezoid\"></div>",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5694,7 +5782,7 @@
   },
   {
     "id": "paste-full-css-056-5-画一条0-5px的线",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "画一条0.5px的线",
@@ -5724,11 +5812,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "transform: scale(0.5,0.5);",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5737,7 +5826,7 @@
   },
   {
     "id": "paste-full-css-057-6-设置小于12px的字体",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "设置小于12px的字体",
@@ -5767,10 +5856,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage",
@@ -5779,7 +5869,7 @@
   },
   {
     "id": "paste-full-css-058-7-如何解决-1px-问题",
-    "category": "CSS",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "如何解决 1px 问题？",
@@ -5809,11 +5899,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "window.devicePixelRatio = 设备的物理像素 / CSS像素。",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "storage"
     ]
@@ -6074,7 +6165,7 @@
   },
   {
     "id": "paste-full-vue-008-8-过滤器的作用-如何实现一个过滤器",
-    "category": "Vue",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "easy",
     "question": "过滤器的作用，如何实现一个过滤器",
@@ -6102,9 +6193,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "<li>商品价格：{{item.price | filterPrice}}</li>\n\n filters: {\n    filterPrice (price) {\n      return price ? ('￥' + price) : '--'\n    }\n  }",
     "tags": [
+      "handwriting",
       "vue",
       "vue-reactivity"
     ]
@@ -6184,7 +6276,7 @@
   },
   {
     "id": "paste-full-vue-011-11-v-if-v-show-v-html-的原理",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "v-if、v-show、v-html 的原理",
@@ -6212,8 +6304,9 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
+      "css",
       "html",
       "vue",
       "vue-reactivity"
@@ -6556,7 +6649,7 @@
   },
   {
     "id": "paste-full-vue-021-22-vue-template-到-render-的过程",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Vue template 到 render 的过程",
@@ -6584,10 +6677,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "codeExample": "// 将模板编译为render函数\nconst { render, staticRenderFns } = compileToFunctions(template,options//省略}, this)",
     "tags": [
       "css",
+      "html",
       "vue",
       "vue-reactivity"
     ]
@@ -7144,7 +7238,7 @@
   },
   {
     "id": "paste-full-vue-037-38-template和jsx的有什么分别",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "template和jsx的有什么分别？",
@@ -7173,9 +7267,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "css",
+      "html",
       "js-basic",
       "react",
       "vue",
@@ -7656,7 +7751,7 @@
   },
   {
     "id": "paste-full-vue-051-1-props-emit",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "（1） props / $emit",
@@ -7683,17 +7778,17 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "codeExample": "// 父组件\n<template>\n    <div id=\"father\">\n        <son :msg=\"msgData\" :fn=\"myFunction\"></son>\n    </div>\n</template>\n\n<script>\nimport son from \"./son.vue\";\nexport default {\n    name: father,\n    data() {\n        msgData: \"父组件数据\";\n    },\n    methods: {\n        myFunction() {\n            console.log(\"vue\");\n        }\n    },\n    components: {\n        son\n    }\n};\n</script>",
     "tags": [
       "css",
-      "vue",
+      "html",
       "vue-reactivity"
     ]
   },
   {
     "id": "paste-full-vue-052-2-eventbus事件总线-emit-on",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "（2）eventBus事件总线（$emit / $on）",
@@ -7721,11 +7816,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "codeExample": "// event-bus.js\n\nimport Vue from 'vue'\nexport const EventBus = new Vue()",
     "tags": [
       "css",
-      "vue",
+      "html",
       "vue-reactivity"
     ]
   },
@@ -8133,7 +8228,7 @@
   },
   {
     "id": "paste-full-vue-064-7-vue-router跳转和location-href有什么区别",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Vue-router跳转和location.href有什么区别",
@@ -8163,8 +8258,9 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
+      "css",
       "html",
       "vue",
       "vue-reactivity"
@@ -8795,7 +8891,7 @@
   },
   {
     "id": "paste-full-vue-082-4-vue-3-0-中的-vue-composition-api",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "Vue 3.0 中的 Vue Composition API？",
@@ -8825,17 +8921,18 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "codeExample": "<template>\n  <button @click=\"increment\">\n    Count: {{ count }}\n  </button>\n</template>\n \n<script>\n// Composition API 将组件属性暴露为函数，因此第一步是导入所需的函数\nimport { ref, computed, onMounted } from 'vue'\n \nexport default {\n  setup() {\n// 使用 ref 函数声明了称为 count 的响应属性，对应于Vue2中的data函数\n    const count = ref(0)\n \n// Vue2中需要在methods option中声明的函数，现在直接声明\n    function increment() {\n      count.value++\n    }\n // 对应于Vue2中的mounted声明周期\n    onMounted(() => console.log('component mounted!'))\n \n    return {\n      count,\n      increment\n    }\n  }\n}\n</script>",
     "tags": [
       "css",
+      "html",
       "vue",
       "vue-reactivity"
     ]
   },
   {
     "id": "paste-full-vue-083-5-composition-api与react-hook很像-区别是什么",
-    "category": "Vue",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Composition API与React Hook很像，区别是什么",
@@ -8863,12 +8960,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "css",
       "hooks",
+      "html",
       "react",
-      "vue",
       "vue-reactivity"
     ]
   },
@@ -9161,7 +9258,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9198,7 +9295,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9235,7 +9332,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9272,7 +9369,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9607,7 +9704,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9646,7 +9743,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "function debounce(fn, wait) {\n  var timer = null;\n\n  return function() {\n    var context = this,\n      args = [...arguments];\n\n    // 如果此时存在定时器的话，则取消之前的定时器重新记时\n    if (timer) {\n      clearTimeout(timer);\n      timer = null;\n    }\n\n    // 设置定时器，使事件间隔指定事件后执行\n    timer = setTimeout(() => {\n      fn.apply(context, args);\n    }, wait);\n  };\n}",
     "tags": [
       "browser",
@@ -9684,7 +9781,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9721,7 +9818,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -9758,7 +9855,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "module.exports = {\n  module: {\n    rules: [\n      {\n        // js 文件才使用 babel\n        test: /\\.js$/,\n        loader: 'babel-loader',\n        // 只在 src 文件夹下查找\n        include: [resolve('src')],\n        // 不会去查找的路径\n        exclude: /node_modules/\n      }\n    ]\n  }\n}",
     "tags": [
       "browser",
@@ -9835,7 +9932,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "engineering",
@@ -9873,7 +9970,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "engineering",
@@ -10632,7 +10729,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10707,7 +10804,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10745,7 +10842,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10784,7 +10881,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10823,7 +10920,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10862,7 +10959,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10941,7 +11038,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -10979,7 +11076,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11018,7 +11115,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11056,7 +11153,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11094,7 +11191,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11132,7 +11229,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11172,7 +11269,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11211,7 +11308,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11249,7 +11346,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11287,7 +11384,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11325,7 +11422,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11363,7 +11460,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11401,7 +11498,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11439,7 +11536,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11477,7 +11574,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11517,7 +11614,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11554,7 +11651,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11591,7 +11688,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11825,7 +11922,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11864,7 +11961,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11904,7 +12001,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11942,7 +12039,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -11980,7 +12077,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12021,7 +12118,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "http\n（Name，Value，Type，TTL）",
     "tags": [
       "browser",
@@ -12060,7 +12157,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12099,7 +12196,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12138,7 +12235,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12178,7 +12275,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12218,7 +12315,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12256,7 +12353,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12294,7 +12391,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12332,7 +12429,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12370,7 +12467,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12408,7 +12505,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12448,7 +12545,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "http",
@@ -12486,7 +12583,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12524,7 +12621,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12562,7 +12659,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "// 在index.html中直接写WebSocket，设置服务端的端口号为 9999\nlet ws = new WebSocket('ws://localhost:9999');\n// 在客户端与服务端建立连接后触发\nws.onopen = function() {\n    console.log(\"Connection open.\"); \n    ws.send('hello');\n};\n// 在服务端给客户端发来消息的时候触发\nws.onmessage = function(res) {\n    console.log(res);       // 打印的是MessageEvent对象\n    console.log(res.data);  // 打印的是收到的消息\n};\n// 在客户端与服务端建立关闭后触发\nws.onclose = function(evt) {\n  console.log(\"Connection closed.\");\n};",
     "tags": [
       "browser",
@@ -12603,7 +12700,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12613,7 +12710,7 @@
   },
   {
     "id": "paste-full-browser-001-1-什么是-xss-攻击",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "什么是 XSS 攻击？",
@@ -12643,9 +12740,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "js-basic",
@@ -12655,7 +12753,7 @@
   },
   {
     "id": "paste-full-browser-002-2-如何防御-xss-攻击",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "如何防御 XSS 攻击？",
@@ -12685,9 +12783,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "http",
       "js-basic",
@@ -12727,7 +12826,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12768,7 +12867,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12808,7 +12907,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12846,7 +12945,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12885,7 +12984,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12924,7 +13023,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -12964,7 +13063,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13002,7 +13101,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13040,7 +13139,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13080,7 +13179,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13119,7 +13218,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13157,7 +13256,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13196,7 +13295,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "// index.js\nif (navigator.serviceWorker) {\n  navigator.serviceWorker\n    .register('sw.js')\n    .then(function(registration) {\n      console.log('service worker 注册成功')\n    })\n    .catch(function(err) {\n      console.log('servcie worker 注册失败')\n    })\n}\n// sw.js\n// 监听 `install` 事件，回调中缓存所需文件\nself.addEventListener('install', e => {\n  e.waitUntil(\n    caches.open('my-cache').then(function(cache) {\n      return cache.addAll(['./index.html', './index.js'])\n    })\n  )\n})\n// 拦截所有请求事件\n// 如果缓存中已经有请求的数据就直接用缓存，否则去请求数据\nself.addEventListener('fetch', e => {\n  e.respondWith(\n    caches.match(e.request).then(function(response) {\n      if (response) {\n        return response\n      }\n      console.log('fetch source')\n    })\n  )\n})",
     "tags": [
       "browser",
@@ -13351,7 +13450,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13389,7 +13488,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13427,7 +13526,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13465,7 +13564,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13503,7 +13602,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13541,7 +13640,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13551,7 +13650,7 @@
   },
   {
     "id": "paste-full-browser-025-1-浏览器的渲染过程",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "浏览器的渲染过程",
@@ -13579,7 +13678,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -13620,7 +13719,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13630,7 +13729,7 @@
   },
   {
     "id": "paste-full-browser-027-3-渲染过程中遇到-js-文件如何处理",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "渲染过程中遇到 JS 文件如何处理？",
@@ -13660,7 +13759,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
@@ -13701,7 +13800,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13711,7 +13810,7 @@
   },
   {
     "id": "paste-full-browser-029-5-css-如何阻塞文档解析",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "CSS 如何阻塞文档解析？",
@@ -13740,10 +13839,11 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
+      "html",
       "http",
       "performance",
       "storage"
@@ -13779,7 +13879,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13817,7 +13917,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13855,7 +13955,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "// 保存数据到 localStorage\nlocalStorage.setItem('key', 'value');\n\n// 从 localStorage 获取数据\nlet data = localStorage.getItem('key');\n\n// 从 localStorage 删除保存的数据\nlocalStorage.removeItem('key');\n\n// 从 localStorage 删除所有保存的数据\nlocalStorage.clear();\n\n// 获取某个索引的Key\nlocalStorage.key(index)",
     "tags": [
       "browser",
@@ -13895,7 +13995,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -13935,7 +14035,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "ai-agent",
       "browser",
@@ -13974,7 +14074,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14012,7 +14112,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14050,7 +14150,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14131,7 +14231,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14169,7 +14269,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14208,7 +14308,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14246,7 +14346,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14284,7 +14384,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "<ul id=\"list\">\n  <li>item 1</li>\n  <li>item 2</li>\n  <li>item 3</li>\n  ......\n  <li>item n</li>\n</ul>",
     "tags": [
       "browser",
@@ -14323,7 +14423,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "document.addEventListener(\"click\", function(e) {\n\tif (e.target.nodeName == \"A\")\n\t\tconsole.log(\"a\");\n}, false);",
     "tags": [
       "browser",
@@ -14364,7 +14464,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14375,7 +14475,7 @@
   },
   {
     "id": "paste-full-browser-046-6-对事件循环的理解",
-    "category": "浏览器原理",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对事件循环的理解",
@@ -14403,11 +14503,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "css",
       "event-loop",
+      "html",
       "http",
       "promise",
       "storage"
@@ -14445,7 +14546,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "event-loop",
@@ -14484,7 +14585,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "function foo() {\n  throw new Error('error')\n}\nfunction bar() {\n  foo()\n}\nbar()",
     "tags": [
       "browser",
@@ -14525,7 +14626,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "setTimeout(() => {\n    console.log('setTimeout')\n}, 0)\nsetImmediate(() => {\n    console.log('setImmediate')\n})",
     "tags": [
       "browser",
@@ -14566,7 +14667,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "// 以下会先打印冒泡然后是捕获\nnode.addEventListener(\n  'click',\n  event => {\n    console.log('冒泡')\n  },\n  false\n)\nnode.addEventListener(\n  'click',\n  event => {\n    console.log('捕获 ')\n  },\n  true\n)",
     "tags": [
       "browser",
@@ -14605,7 +14706,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "enum AllocationSpace {\n  // TODO(v8:7464): Actually map this space's memory as read-only.\n  RO_SPACE,    // 不变的对象空间\n  NEW_SPACE,   // 新生代用于 GC 复制算法的空间\n  OLD_SPACE,   // 老生代常驻对象空间\n  CODE_SPACE,  // 老生代代码对象空间\n  MAP_SPACE,   // 老生代 map 对象\n  LO_SPACE,    // 老生代大空间对象\n  NEW_LO_SPACE,  // 新生代大空间对象\n  FIRST_SPACE = RO_SPACE,\n  LAST_SPACE = NEW_LO_SPACE,\n  FIRST_GROWABLE_PAGED_SPACE = OLD_SPACE,\n  LAST_GROWABLE_PAGED_SPACE = MAP_SPACE\n};",
     "tags": [
       "browser",
@@ -14643,7 +14744,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -14683,7 +14784,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic",
       "promise",
@@ -14723,7 +14824,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "console.log(typeof 2);               // number\nconsole.log(typeof true);            // boolean\nconsole.log(typeof 'str');           // string\nconsole.log(typeof []);              // object    \nconsole.log(typeof function(){});    // function\nconsole.log(typeof {});              // object\nconsole.log(typeof undefined);       // undefined\nconsole.log(typeof null);            // object",
     "tags": [
       "js-basic",
@@ -14732,7 +14833,7 @@
   },
   {
     "id": "paste-js-basic-003-3-判断数组的方式有哪些",
-    "category": "JavaScript 基础",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "判断数组的方式有哪些",
@@ -14761,9 +14862,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "codeExample": "Object.prototype.toString.call(obj).slice(8,-1) === 'Array';",
     "tags": [
+      "css",
       "html",
       "js-basic",
       "prototype"
@@ -14837,7 +14939,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "000: object   - 当前存储的数据指向一个对象。\n  1: int      - 当前存储的数据是一个 31 位的有符号整数。\n010: double   - 当前存储的数据指向一个双精度的浮点数。\n100: string   - 当前存储的数据指向一个字符串。\n110: boolean  - 当前存储的数据是布尔值。",
     "tags": [
       "js-basic",
@@ -14848,7 +14950,7 @@
   },
   {
     "id": "paste-js-basic-006-6-intanceof-操作符的实现原理及实现",
-    "category": "JavaScript 基础",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "intanceof 操作符的实现原理及实现",
@@ -14877,9 +14979,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "codeExample": "function myInstanceof(left, right) {\n  // 获取对象的原型\n  let proto = Object.getPrototypeOf(left)\n  // 获取构造函数的 prototype 对象\n  let prototype = right.prototype; \n \n  // 判断构造函数的 prototype 对象是否在对象的原型链上\n  while (true) {\n    if (!proto) return false;\n    if (proto === prototype) return true;\n    // 如果没有找到，就继续从其原型上找，Object.getPrototypeOf方法用来获取指定对象的原型\n    proto = Object.getPrototypeOf(proto);\n  }\n}",
     "tags": [
+      "css",
       "html",
       "js-basic",
       "prototype"
@@ -14955,7 +15058,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic"
     ]
@@ -15288,7 +15391,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "/**\n* @obj 需要转换的对象\n* @type 期望的结果类型\n*/\nToPrimitive(obj,type)",
     "tags": [
       "js-basic",
@@ -15299,7 +15402,7 @@
   },
   {
     "id": "paste-js-basic-018-18-操作符什么时候用于字符串的拼接",
-    "category": "JavaScript 基础",
+    "category": "代码输出",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "+ 操作符什么时候用于字符串的拼接？",
@@ -15439,7 +15542,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "codeExample": "if(Json.stringify(Obj) == '{}' ){\n    console.log('空对象');\n}",
     "tags": [
       "http",
@@ -15941,7 +16044,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "const map = [\n     [\"name\",\"张三\"],\n     [\"age\",18],\n]",
     "tags": [
       "browser",
@@ -15978,7 +16081,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic",
       "promise"
@@ -16012,7 +16115,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "// （1）匹配 16 进制颜色值\nvar regex = /#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})/g;\n\n// （2）匹配日期，如 yyyy-mm-dd 格式\nvar regex = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;\n\n// （3）匹配 qq 号\nvar regex = /^[1-9][0-9]{4,10}$/g;\n\n// （4）手机号码正则\nvar regex = /^1[34578]\\d{9}$/g;\n\n// （5）用户名正则\nvar regex = /^[a-zA-Z\\$][a-zA-Z0-9_\\$]{4,16}$/;",
     "tags": [
       "js-basic",
@@ -16059,7 +16162,7 @@
   },
   {
     "id": "paste-js-basic-038-7-javascript脚本延迟加载的方式有哪些",
-    "category": "JavaScript 基础",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "JavaScript脚本延迟加载的方式有哪些？",
@@ -16085,9 +16188,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "browser",
+      "css",
       "html",
       "js-basic",
       "promise"
@@ -16121,7 +16225,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "Array.prototype.slice.call(arrayLike);",
     "tags": [
       "browser",
@@ -16263,7 +16367,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "function foo(){ \n  Array.prototype.forEach.call(arguments, a => console.log(a))\n}",
     "tags": [
       "js-basic",
@@ -16336,7 +16440,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "Array.prototype.slice.call(arrayLike);",
     "tags": [
       "browser",
@@ -16374,14 +16478,14 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "medium",
+    "priority": "low",
     "tags": [
       "js-basic"
     ]
   },
   {
     "id": "paste-js-basic-047-16-对ajax的理解-实现一个ajax请求",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对AJAX的理解，实现一个AJAX请求",
@@ -16410,9 +16514,10 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "const SERVER_URL = \"/server\";\nlet xhr = new XMLHttpRequest();\n// 创建 Http 请求\nxhr.open(\"GET\", url, true);\n// 设置状态监听函数\nxhr.onreadystatechange = function() {\n  if (this.readyState !== 4) return;\n  // 当请求成功时\n  if (this.status === 200) {\n    handle(this.response);\n  } else {\n    console.error(this.statusText);\n  }\n};\n// 设置请求失败时的监听函数\nxhr.onerror = function() {\n  console.error(this.statusText);\n};\n// 设置请求头信息\nxhr.responseType = \"json\";\nxhr.setRequestHeader(\"Accept\", \"application/json\");\n// 发送 Http 请求\nxhr.send(null);",
     "tags": [
+      "handwriting",
       "http",
       "js-basic",
       "network",
@@ -16421,7 +16526,7 @@
   },
   {
     "id": "paste-js-basic-048-17-javascript为什么要进行变量提升-它导致了什么问题",
-    "category": "JavaScript 基础",
+    "category": "代码输出",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "JavaScript为什么要进行变量提升，它导致了什么问题？",
@@ -16448,7 +16553,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "a = 1;\nvar a;\nconsole.log(a);",
     "tags": [
       "code-output",
@@ -16599,7 +16704,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic",
       "this"
@@ -16607,7 +16712,7 @@
   },
   {
     "id": "paste-js-basic-053-22-如何判断一个对象是否属于某个类",
-    "category": "JavaScript 基础",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "medium",
     "question": "如何判断一个对象是否属于某个类？",
@@ -16633,8 +16738,9 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
+      "css",
       "html",
       "js-basic",
       "prototype"
@@ -16746,7 +16852,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic",
       "promise",
@@ -16784,7 +16890,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "var obj = {\n    0:'one',\n    1:'two',\n    length: 2\n};\nobj = Array.from(obj);\nfor(var k of obj){\n    console.log(k)\n}",
     "tags": [
       "js-basic",
@@ -16823,7 +16929,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "browser",
       "http",
@@ -17221,7 +17327,7 @@
   },
   {
     "id": "paste-js-basic-069-3-对执行上下文的理解",
-    "category": "JavaScript 基础",
+    "category": "代码输出",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "对执行上下文的理解",
@@ -17377,7 +17483,7 @@
   },
   {
     "id": "paste-js-basic-073-1-异步编程的实现方式",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "异步编程的实现方式？",
@@ -17406,7 +17512,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "event-loop",
       "handwriting",
@@ -17416,7 +17522,7 @@
   },
   {
     "id": "paste-js-basic-074-2-settimeout-promise-async-await-的区别",
-    "category": "JavaScript 基础",
+    "category": "代码输出",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "setTimeout、Promise、Async/Await 的区别",
@@ -17581,7 +17687,7 @@
   },
   {
     "id": "paste-js-basic-078-6-promise-all和promise-race的区别的使用场景",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "Promise.all和Promise.race的区别的使用场景",
@@ -17706,7 +17812,7 @@
   },
   {
     "id": "paste-js-basic-081-9-async-await的优势",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "async/await的优势",
@@ -17737,7 +17843,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "/**\n * 传入参数 n，表示这个函数执行的时间（毫秒）\n * 执行的结果是 n + 200，这个值将用于下一步骤\n */\nfunction takeLongTime(n) {\n    return new Promise(resolve => {\n        setTimeout(() => resolve(n + 200), n);\n    });\n}\nfunction step1(n) {\n    console.log(`step1 with ${n}`);\n    return takeLongTime(n);\n}\nfunction step2(n) {\n    console.log(`step2 with ${n}`);\n    return takeLongTime(n);\n}\nfunction step3(n) {\n    console.log(`step3 with ${n}`);\n    return takeLongTime(n);\n}",
     "tags": [
       "event-loop",
@@ -17748,7 +17854,7 @@
   },
   {
     "id": "paste-js-basic-082-10-async-await对比promise的优势",
-    "category": "JavaScript 基础",
+    "category": "手写代码",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "async/await对比Promise的优势",
@@ -17779,7 +17885,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "event-loop",
       "handwriting",
@@ -17860,7 +17966,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic",
       "prototype"
@@ -17898,7 +18004,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "tags": [
       "js-basic",
       "prototype"
@@ -17935,7 +18041,7 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "medium",
     "codeExample": "function fun() {\n    let obj1 = {};\n    let obj2 = {};\n    obj1.a = obj2; // obj1 引用 obj2\n    obj2.a = obj1; // obj2 引用 obj1\n}",
     "tags": [
       "browser",
@@ -17947,7 +18053,7 @@
   },
   {
     "id": "paste-js-basic-087-2-哪些情况会导致内存泄漏",
-    "category": "JavaScript 基础",
+    "category": "HTML / CSS",
     "type": "short_answer",
     "difficulty": "hard",
     "question": "哪些情况会导致内存泄漏",
@@ -17976,11 +18082,12 @@
     "sourceName": "公开前端面试知识点整理",
     "sourceUrl": "manual",
     "quality": "generated",
-    "priority": "high",
+    "priority": "low",
     "tags": [
       "browser",
       "closure",
       "css",
+      "html",
       "http",
       "js-basic",
       "storage"
